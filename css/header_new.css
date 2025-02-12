@@ -1,0 +1,27 @@
+#search .new_search {
+    height: 46px;
+    border-radius: 10px;
+}
+
+.fa-heart {
+    background: url('/catalog/view/theme/unishop2/image/Heart_01.svg') no-repeat center;
+    background-size: contain;
+    width: 24px; /* Задай нужный размер */
+    height: 24px;
+    display: inline-block;
+    font-size: 0; /* Чтобы не отображалась старая иконка */
+}
+
+.fa-heart:before {
+    content: ""!important;
+}
+
+.header-search__form {
+    max-width: 730px;
+}
+
+.header-search {
+    max-width: 730px;
+    margin-left: 220px;
+}
+
