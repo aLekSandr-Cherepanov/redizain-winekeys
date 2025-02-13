@@ -107,7 +107,7 @@
 	</div>
 	<div class="container">
 		<div class="header-block">
-					<div class="header-block__item header-block__item-logo {{ menu_positions == 0 ? 'col-sm-6 col-md-3 col-lg-3 col-xxl-4' }}">
+					<div class="header-block__item header-block__item-logo">
 						<div id="logo" class="header-logo">
 							{% if logo %}
 								{% if og_url is defined and home == og_url %}
@@ -152,17 +152,15 @@
 							{% endif %}
 						</div>
 					{% endif %}
-					{% if wishlist and wishlist.position == 2 %}
-						<div class="header-block__item header-block__item-wishlist">
+					<div class="wrapper-right-block">
+						<div class="header-block__item-phone">
+							<img src="/catalog/view/theme/unishop2/image/Phone.svg" alt="">
+						</div>
+						<div class="header-block__item-wishlistNew header-block__item header-block__item-wishlist">
 							<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}"><i class="header-wishlist__icon  fa-heart"></i><span class="header-wishlist__total-items">{{ wishlist.total }}</span></div>
 						</div>
-					{% endif %}
-					{% if compare and compare.position == 2 %}
-						<div class="header-block__item header-block__item-compare">
-							<div class="header-compare uni-href" data-href="{{ compare.href }}" title="{{ compare.text }}"><i class="header-compare__icon fas fa-align-right"></i><span class="header-compare__total-items">{{ compare.total }}</span></div>
-						</div>
-					{% endif %}
-					<div class="header-block__item header-block__item-cart">{{ cart }}</div>
+						<div class="header-block__item header-block__item-cart header-block__item-cartNew">{{ cart }}</div>
+					</div>
 				</div>
 	</div>
         

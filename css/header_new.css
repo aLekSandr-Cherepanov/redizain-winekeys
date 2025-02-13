@@ -86,3 +86,33 @@
 .header-top__menu-item a {
     color: black;
 }
+
+.header-block__item-search {
+    order: 0!important;
+    padding: 0;
+}
+
+.wrapper-right-block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.wrapper-right-block .header-block__item-wishlistNew {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper-right-block .header-block__item-cartNew {
+    padding: 0;
+}
+
+.header-account, .header-wishlist, .header-compare, .header-cart {
+    margin-top: 0!important;
+}
+
+.img-responsive {
+    width: 150px;
+}
