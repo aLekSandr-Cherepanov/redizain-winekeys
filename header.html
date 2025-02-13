@@ -62,110 +62,117 @@
     </style>
 
     <header class="header">
-	<div class="header-top">
-        <div class="container">
-            <div class="header-top__wrapper">
-            	<div class="header-top__contact">
-	                <div class="header-top__location">
-	                    <img src="/catalog/view/theme/unishop2/image/Map_Pin.svg" alt="">
-	                    <span>Санкт-Петербург</span>
-	                </div>
-	                <div class="header-top__info">
-	                    <div class="header-top__social">
-	                        <img src="/catalog/view/theme/unishop2/image/telegramm.svg" alt="whatsapp">
-	                        <img src="/catalog/view/theme/unishop2/image/whatsapp.svg" alt="telegram">
-	                    </div>
-	                    <div class="header-top__phone">
-	                        <span class="header-top__phone-number">+7 (800) 777-59-34</span>
-	                    </div>
-	                </div>
-	            </div>
-	            <div class="header-top__menu">
-	                <div class="header-top__menu-item">
-	                    <a href="/catalog">О компании</a>
-	                </div>
-	                <div class="header-top__menu-item">
-	                    <a href="/delivery">Бренды</a>
-	                </div>
-	                <div class="header-top__menu-item">
-	                    <a href="/payment">Гарантии</a>
-	                </div>
-					<div class="header-top__menu-item">
-	                    <a href="/payment">Доставка и оплата</a>
-	                </div>
-					<div class="header-top__menu-item">
-	                    <a href="/payment">Вакансии</a>
-	                </div>
-					<div class="header-top__menu-item">
-	                    <a href="/payment">Контакты</a>
-	                </div>
-	            </div>
-            </div>
-        </div>
-	</div>
-	<div class="container">
-		<div class="header-block">
+		<div class="header-top">
+			<div class="header-top__inner">
+				<div class="container container_header-top">
+					<div class="header-top__wrapper">
+						<div class="header-top__contact">
+							<div class="header-top__location">
+								<img src="/catalog/view/theme/unishop2/image/Map_Pin.svg" alt="">
+								<span>Санкт-Петербург</span>
+							</div>
+							<div class="header-top__info">
+								<div class="header-top__social">
+									<img src="/catalog/view/theme/unishop2/image/telegramm.svg" alt="whatsapp">
+									<img src="/catalog/view/theme/unishop2/image/whatsapp.svg" alt="telegram">
+								</div>
+								<div class="header-top__phone">
+									<span class="header-top__phone-number">+7 (800) 777-59-34</span>
+								</div>
+							</div>
+						</div>
+						<div class="header-top__menu">
+							<div class="header-top__menu-item">
+								<a href="/catalog">О компании</a>
+							</div>
+							<div class="header-top__menu-item">
+								<a href="/delivery">Бренды</a>
+							</div>
+							<div class="header-top__menu-item">
+								<a href="/payment">Гарантии</a>
+							</div>
+							<div class="header-top__menu-item">
+								<a href="/payment">Доставка и оплата</a>
+							</div>
+							<div class="header-top__menu-item">
+								<a href="/payment">Вакансии</a>
+							</div>
+							<div class="header-top__menu-item">
+								<a href="/payment">Контакты</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header-block">
+				<div class="header-block__item header-block__item-logo">
+					<div id="logo" class="header-logo">
+						{% if logo %}
+							{% if og_url is defined and home == og_url %}
+								<img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" decoding="async" class="header-logo__img img-responsive" />
+							{% else %}
+								<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" class="header-logo__img img-responsive img-responsiveNew" /></a>
+							{% endif %}
+						{% else %}
+							{% if og_url is defined and home == og_url %}
+								<span>{{ shop_name }}</span>
+							{% else %}
+								<a href="{{ home }}">{{ shop_name }}</a>
+							{% endif %}
+						{% endif %}
+					</div>
+				</div>
+				{% if menu_positions %}
+					<div class="header-block__item header-block__item-menu hidden-xs hidden-sm">
+						<button class="header-menu__btn"><i class="header-menu__icon fas fa-fw fa-bars"></i>{{ text_menu }}</button>
+					</div>
+				{% endif %}
+				<div class="prmn-cmngr">{{ prmn_cmngr }}</div>
+				<div id="search" class="  header-block__item header-block__item-search {{ search_phone_change ? 'order-2' }} hidden-xs hidden-sm">
+					{{ search_new }}
+				</div>
+				{% if account.position == 2 %}
+					<div class="header-block__item header-block__item-account {{ class }}">
+						{% if logged %}
+							<div class="header-account" title="{{ text_account_new }}">
+								<i class="header-account__icon fas fa-user dropdown-toggle" data-toggle="dropdown"></i>
+								<ul class="dropdown-menu dropdown-menu-right">
+									<li><a href="{{ account.link }}"><i class="far fa-fw fa-user"></i>{{ text_account }}</a></li>
+									<li><a href="{{ order }}"><i class="fas fa-fw fa-history"></i>{{ text_order }}</a></li>
+									{% if account.transaction_link %}<li><a href="{{ transaction }}"><i class="fas fa-fw fa-exchange-alt"></i>{{ text_transaction }}</a></li>{% endif %}
+									{% if account.download_link %}<li><a href="{{ download }}"><i class="fas fa-fw fa-download"></i>{{ text_download }}</a></li>{% endif %}
+									<hr style="margin:5px 0" />
+									<li><a href="{{ logout }}"><i class="fas fa-fw fa-sign-out-alt"></i>{{ text_logout }}</a></li>
+								</ul>
+							</div>
+						{% else %}
+							<div class="header-account uni-href" {% if account.popup_login %}onclick="uniLoginOpen();"{% else %} data-href="{{ login }}"{% endif %} title="{{ text_login_new }}"><i class="header-account__icon far fa-user"></i></div>
+						{% endif %}
+					</div>
+				{% endif %}
+				<div class="wrapper-right-block">
 					<div class="header-block__item-phone">
 						<img src="/catalog/view/theme/unishop2/image/Phone.svg" alt="">
 					</div>
-					<div class="header-block__item header-block__item-logo {{ menu_positions == 0 ? 'col-sm-6 col-md-3 col-lg-3 col-xxl-4' }}">
-						<div id="logo" class="header-logo">
-							{% if logo %}
-								{% if og_url is defined and home == og_url %}
-									<img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" decoding="async" class="header-logo__img img-responsive" />
-								{% else %}
-									<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" class="header-logo__img img-responsive" /></a>
-								{% endif %}
-							{% else %}
-								{% if og_url is defined and home == og_url %}
-									<span>{{ shop_name }}</span>
-								{% else %}
-									<a href="{{ home }}">{{ shop_name }}</a>
-								{% endif %}
-							{% endif %}
-						</div>
+					<div class="header-block__item-wishlistNew header-block__item header-block__item-wishlist">
+						<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}"><i class="header-wishlist__icon  fa-heart"></i><span class="header-wishlist__total-items">{{ wishlist.total }}</span></div>
 					</div>
-					{% if menu_positions %}
-						<div class="header-block__item header-block__item-menu hidden-xs hidden-sm">
-							<button class="header-menu__btn"><i class="header-menu__icon fas fa-fw fa-bars"></i>{{ text_menu }}</button>
-						</div>
-					{% endif %}
-					<div class="prmn-cmngr">{{ prmn_cmngr }}</div>
-					<div id="search" class="  header-block__item header-block__item-search {{ search_phone_change ? 'order-2' }} hidden-xs hidden-sm">
-						{{ search_new }}
-					</div>
-					{% if account.position == 2 %}
-						<div class="header-block__item header-block__item-account {{ class }}">
-							{% if logged %}
-								<div class="header-account" title="{{ text_account_new }}">
-									<i class="header-account__icon fas fa-user dropdown-toggle" data-toggle="dropdown"></i>
-									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="{{ account.link }}"><i class="far fa-fw fa-user"></i>{{ text_account }}</a></li>
-										<li><a href="{{ order }}"><i class="fas fa-fw fa-history"></i>{{ text_order }}</a></li>
-										{% if account.transaction_link %}<li><a href="{{ transaction }}"><i class="fas fa-fw fa-exchange-alt"></i>{{ text_transaction }}</a></li>{% endif %}
-										{% if account.download_link %}<li><a href="{{ download }}"><i class="fas fa-fw fa-download"></i>{{ text_download }}</a></li>{% endif %}
-										<hr style="margin:5px 0" />
-										<li><a href="{{ logout }}"><i class="fas fa-fw fa-sign-out-alt"></i>{{ text_logout }}</a></li>
-									</ul>
-								</div>
-							{% else %}
-								<div class="header-account uni-href" {% if account.popup_login %}onclick="uniLoginOpen();"{% else %} data-href="{{ login }}"{% endif %} title="{{ text_login_new }}"><i class="header-account__icon far fa-user"></i></div>
-							{% endif %}
-						</div>
-					{% endif %}
-					{% if wishlist and wishlist.position == 2 %}
-						<div class="header-block__item header-block__item-wishlist">
-							<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}"><i class="header-wishlist__icon  fa-heart"></i><span class="header-wishlist__total-items">{{ wishlist.total }}</span></div>
-						</div>
-					{% endif %}
-					{% if compare and compare.position == 2 %}
-						<div class="header-block__item header-block__item-compare">
-							<div class="header-compare uni-href" data-href="{{ compare.href }}" title="{{ compare.text }}"><i class="header-compare__icon fas fa-align-right"></i><span class="header-compare__total-items">{{ compare.total }}</span></div>
-						</div>
-					{% endif %}
-					<div class="header-block__item header-block__item-cart">{{ cart }}</div>
+					<div class="header-block__item header-block__item-cart header-block__item-cartNew">{{ cart }}</div>
 				</div>
-	</div>
-        
-	</header>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="menu-wrapper">
+					<ul class="menuNew">
+						<li class="menuNew__item">
+
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+    </header>
 </body>
