@@ -12,7 +12,20 @@
     font-size: 0; /* Чтобы не отображалась старая иконка */
 }
 
+.fa-shopping-bag {
+    background: url('/catalog/view/theme/unishop2/image/Shopping_Cart_02.svg') no-repeat center;
+    background-size: contain;
+    width: 24px; /* Задай нужный размер */
+    height: 24px;
+    display: inline-block;
+    font-size: 0; /* Чтобы не отображалась старая иконка */
+}
+
 .fa-heart:before {
+    content: ""!important;
+}
+
+.fa-shopping-bag:before {
     content: ""!important;
 }
 
@@ -25,3 +38,32 @@
     margin-left: 220px;
 }
 
+.header-account:after, .header-wishlist:after, .header-compare:after, .header-cart:after {
+    display: none!important;
+}
+
+.header-top__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-top__contact {
+    display: flex;
+    gap: 24px;
+}
+
+.header-top__info {
+    display: flex;
+    gap: 12px;
+}
+
+.header-top__menu {
+    display: flex;
+    gap: 24px;
+}
+
+.header-top__location {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
