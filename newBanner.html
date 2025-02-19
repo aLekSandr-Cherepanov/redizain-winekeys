@@ -1,0 +1,323 @@
+
+    <style>
+        .promo-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            align-items: center;
+        }
+
+        .wrapper-promo-card {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .logo-wink {
+            margin-bottom: 20px;
+        }
+
+
+        .promo-card {
+            width: 100%;
+            max-width: 360px;
+            height: 336px;
+            background: #F6F6F6;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        
+
+        .promo-card-2 {
+            display: flex;
+            align-items: flex-end;
+            background: url('/catalog/view/theme/unishop2/image/person.png') no-repeat center/cover;
+            color: white;
+            text-align: center;
+            padding: 0;
+            position: relative;
+            background-color: #F6F6F6;
+        }
+
+        .promo-card-2 h3, .promo-card-2 p, .promo-card-2 .btnNew {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btnNew {
+            text-align: center;
+            padding: 13px 0 13px 0;
+            border-radius: 10px;
+        }
+
+        .promo-main {
+            position: relative;
+            background: url(/catalog/view/theme/unishop2/image/big-promo.png) no-repeat center / cover;
+            border-radius: 10px;
+            height: 100%;
+            width: 730px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .promo-main .overlay {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            background: rgba(246, 246, 246, 0.9);
+        }
+
+        .promo-main .btnNew-main {
+            width: 100%;
+            display: inline-block;
+            background: #F96158;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        .promo-card__content {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            text-align: left;
+            background-color: #F6F6F6;
+            opacity: 90%;
+            margin-bottom: 6px;
+        }
+
+        .promo-card__content2 {
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        .promo-card__contentAdpt {
+            padding: 20px;
+            margin-bottom: 0;
+        }
+
+        .promo-card__text {
+            font-size: 18px;
+            margin: 0px;
+            line-height: 21px!important;
+        }
+
+        .promo-card__title {
+            font-size: 20px;
+            margin-bottom: 0;
+        }
+
+        .promo-card__titleH2 {
+            margin: 0 0 9px !important;
+            font-weight: 500;
+            font-size: 32px!important;
+            color: #F96158;
+        }
+
+        @media (max-width: 1024px) {
+            .promo-main {
+                grid-column: auto;
+            }
+        }
+
+        .promo-card__btn {
+            display: flex;
+            border-radius: 10px;
+            border: 1px solid #F96158;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+        }
+        @media (max-width: 1400px) {
+            .promo-main {
+                width: 630px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .promo-main {
+                width: 515px;
+            }
+            .promo-card {
+                padding: 10px;
+            }
+            .promo-card-2 {
+                padding: 0;
+            }
+        }
+        @media (max-width: 1050px) {
+            .promo-main {
+                width: 455px;
+            }
+            .logo-wink {
+                width: 100px;
+                margin-bottom: 5px;
+            }
+            .promo-card {
+                height: 315px;
+            }
+            .promo-card__content2 {
+                padding: 10px;
+            }
+            .promo-card-adbt {
+                position: relative;
+            }
+            .promo-card-adbt__img {
+                width: 120px;
+                position: absolute;
+            }
+            .promo-card-adbt2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+            .promo-card-adbt2 > div {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end; /* Прижимаем контент к низу */
+                flex-grow: 1;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .promo-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .promo-main {
+                order: -1; /* Перемещаем .promo-main в начало */
+                width: 100%;
+                height: 400px;
+            }
+
+            .wrapper-promo-card {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+            }
+
+            .promo-card {
+                max-width: 100%; /* Чтобы блоки растягивались в сетке */
+                height: 358px;
+            }
+            .logo-wink {
+                width: 150px;
+            }
+
+            .promo-card-adbt__img {
+                position: relative;
+            }
+
+            .promo-card-adbt {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .promo-card__contentAdpt {
+                padding: 10px;
+            }
+
+            /* Если экран становится уже 600px, выстраиваем блоки в один столбец */
+            @media (max-width: 600px) {
+                .wrapper-promo-card {
+                    grid-template-columns: 1fr;
+                }
+
+                .promo-card__titleH2 {
+                    text-align: left;
+                    font-size: 26px !important;
+                }
+                .btnNew {
+                    padding: 6px 0 6px 0;
+                }
+                .promo-card-adbt3 {
+                    height: auto;
+                }
+            }
+        }
+
+    </style>
+
+
+<section class="promo-section">
+    <div class="wrapper-promo-card">
+        <div class="promo-card promo-card-adbt promo-card-adbt3">
+            <img class="logo-wink" src="/catalog/view/theme/unishop2/image/logoWink.png" alt="Инвестор">
+            <div>
+                <div class="promo-card__content">
+                    <h3 class="promo-card__title">Стать инвестором</h3>
+                    <p class="promo-card__text">Наше современное производство уже выполнило более 30 уникальных проектов винных шкафов</p>
+                </div>
+                <a class="promo-card__btn">
+                    <span href="#" class="btnNew">Узнать подробнее</span>
+                    <img src="/catalog/view/theme/unishop2/image/mini- arrow.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="promo-card promo-card-2">
+            <div class="promo-card__content promo-card__contentAdpt">
+                <div class="promo-card-adbt">
+                    <h3 class="promo-card__title">Как выбрать винный шкаф?</h3>
+                    <p class="promo-card__text">В статье рассказываем важную информацию для Вас</p>
+                </div>
+                <a class="promo-card__btn">
+                    <span href="#" class="btnNew">Читать советы экспертов</span>
+                    <img src="/catalog/view/theme/unishop2/image/mini- arrow.svg" alt="">
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="promo-main">
+        <div class="overlay">
+            <h1 class="promo-card__titleH2">Проектируем и собираем <br> винные шкафы <br> на нашем производстве</h1>
+            <a class="promo-card__btn btnNew-main">
+                <span href="#" class="btnNew">Посмотреть наше производство</span>
+                <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="">
+            </a>
+        </div>
+    </div>
+
+    <div class="wrapper-promo-card">
+        <div class="promo-card promo-card-adbt promo-card-adbt3">
+            <img class="logo-wink" src="/catalog/view/theme/unishop2/image/sert.png" alt="Сертификат">
+            <div >
+                <div class="promo-card__content">
+                    <h3 class="promo-card__title">Подарочный сертификат</h3>
+                    <p class="promo-card__text">Удачный подарок для близкого человека, коллеги или руководителя</p>
+                </div>
+                <a class="promo-card__btn">
+                    <span href="#" class="btnNew">Узнать подробнее</span>
+                    <img src="/catalog/view/theme/unishop2/image/mini- arrow.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="promo-card promo-card-adbt promo-card-adbt2 promo-card-adbt3">
+            <img class="promo-card-adbt__img" src="/catalog/view/theme/unishop2/image/shkaf.png" alt="Сертификат">
+            <div>
+                <div class="promo-card__content">
+                    <h3 class="promo-card__title">Винные шкафы ABCino</h3>
+                    <p class="promo-card__text">Премиальное качество, 5 лет гарантии, эксклюзивные технологические решения</p>
+                </div>
+                <a class="promo-card__btn">
+                    <span href="#" class="btnNew">Узнать подробнее</span>
+                    <img src="/catalog/view/theme/unishop2/image/mini- arrow.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

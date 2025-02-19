@@ -66,6 +66,23 @@
 			<div class="header-top__inner">
 				<div class="container container_header-top">
 					<div class="header-top__wrapper">
+						<div class="header-block__item-mobile">
+							<div id="logo" class="header-logoNew">
+								{% if logo %}
+									{% if og_url is defined and home == og_url %}
+										<img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" decoding="async" class="header-logo__img img-responsive" />
+									{% else %}
+										<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" class="header-logo__img img-responsive img-responsiveNew" /></a>
+									{% endif %}
+								{% else %}
+									{% if og_url is defined and home == og_url %}
+										<span>{{ shop_name }}</span>
+									{% else %}
+										<a href="{{ home }}">{{ shop_name }}</a>
+									{% endif %}
+								{% endif %}
+							</div>
+						</div>
 						<div class="header-top__contact">
 							<div class="header-top__location">
 								<img src="/catalog/view/theme/unishop2/image/Map_Pin.svg" alt="">
@@ -85,10 +102,10 @@
 							<div class="header-top__menu-item">
 								<a href="/catalog">О компании</a>
 							</div>
-							<div class="header-top__menu-item">
+							<div class="header-top__menu-item header-top__menu-item-adaptiv">
 								<a href="/delivery">Бренды</a>
 							</div>
-							<div class="header-top__menu-item">
+							<div class="header-top__menu-item header-top__menu-item-adaptiv">
 								<a href="/payment">Гарантии</a>
 							</div>
 							<div class="header-top__menu-item">
@@ -107,7 +124,7 @@
 		</div>
 		<div class="container">
 			<div class="header-block">
-				<div class="header-block__item header-block__item-logo">
+				<div class="header-block__item">
 					<div id="logo" class="header-logo">
 						{% if logo %}
 							{% if og_url is defined and home == og_url %}
@@ -130,7 +147,7 @@
 					</div>
 				{% endif %}
 				<div class="prmn-cmngr">{{ prmn_cmngr }}</div>
-				<div id="search" class="  header-block__item header-block__item-search {{ search_phone_change ? 'order-2' }} hidden-xs hidden-sm">
+				<div id="search" class="  header-block__item header-block__item-search {{ search_phone_change ? 'order-2' }}">
 					{{ search_new }}
 				</div>
 				{% if account.position == 2 %}
@@ -139,12 +156,22 @@
 							<div class="header-account" title="{{ text_account_new }}">
 								<i class="header-account__icon fas fa-user dropdown-toggle" data-toggle="dropdown"></i>
 								<ul class="dropdown-menu dropdown-menu-right">
-									<li><a href="{{ account.link }}"><i class="far fa-fw fa-user"></i>{{ text_account }}</a></li>
-									<li><a href="{{ order }}"><i class="fas fa-fw fa-history"></i>{{ text_order }}</a></li>
-									{% if account.transaction_link %}<li><a href="{{ transaction }}"><i class="fas fa-fw fa-exchange-alt"></i>{{ text_transaction }}</a></li>{% endif %}
-									{% if account.download_link %}<li><a href="{{ download }}"><i class="fas fa-fw fa-download"></i>{{ text_download }}</a></li>{% endif %}
+									<li>
+										<a href="{{ account.link }}"><i class="far fa-fw fa-user"></i>{{ text_account }}</a>
+									</li>
+									<li>
+										<a href="{{ order }}"><i class="fas fa-fw fa-history"></i>{{ text_order }}</a>
+									</li>
+									{% if account.transaction_link %}<li>
+										<a href="{{ transaction }}"><i class="fas fa-fw fa-exchange-alt"></i>{{ text_transaction }}</a>
+									</li>{% endif %}
+									{% if account.download_link %}<li>
+										<a href="{{ download }}"><i class="fas fa-fw fa-download"></i>{{ text_download }}</a>
+									</li>{% endif %}
 									<hr style="margin:5px 0" />
-									<li><a href="{{ logout }}"><i class="fas fa-fw fa-sign-out-alt"></i>{{ text_logout }}</a></li>
+									<li>
+										<a href="{{ logout }}"><i class="fas fa-fw fa-sign-out-alt"></i>{{ text_logout }}</a>
+									</li>
 								</ul>
 							</div>
 						{% else %}
@@ -156,7 +183,7 @@
 					<div class="header-block__item-phone">
 						<img src="/catalog/view/theme/unishop2/image/Phone.svg" alt="">
 					</div>
-					<div class="header-block__item-wishlistNew header-block__item header-block__item-wishlist">
+					<div class="header-block__item-wishlistNew header-block__item">
 						<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}"><i class="header-wishlist__icon  fa-heart"></i><span class="header-wishlist__total-items">{{ wishlist.total }}</span></div>
 					</div>
 					<div class="header-block__item header-block__item-cart header-block__item-cartNew">{{ cart }}</div>
@@ -165,50 +192,86 @@
 		</div>
 		<div class="container">
 			<div class="row">
-				<div class="menu-wrapper">
-					<div class="menuNew">
-						<ul class="menuNew__list">
-							<li class="menuNew__item menuNew__item-button">
-								<a href="#">Каталог</a>
-								<!--<div class="menuNew__level2">
-									<ul class="menuNew__level2-list">
-										<a href="#">выпадающий список меню</a>
-									</ul>
-								</div>-->
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Акции</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Винные шкафы</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Диспенсеры</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Аксессуары</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Мини-бары</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Хьюмидоры</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Витрины</a>
-							</li>
-							<li class="menuNew__item">
-								<a href="#">Стеллажи</a>
-							</li>
-						</ul>
+				<div class="block-menu-wrapper">
+					<div class="menu-wrapper">
+						<div class="menuNew">
+							<ul class="menuNew__list">
+								<li class="menuNew__item menuNew__item-button">
+									<div class="menuNew__button">
+										<a href="#">Каталог</a>
+										<img class="menuNew__button-arrow" src="/catalog/view/theme/unishop2/image/mini-arrow.svg" alt="">
+									</div>
+									<!--<div class="menuNew__level2">
+										<ul class="menuNew__level2-list">
+											<a href="#">выпадающий список меню</a>
+										</ul>
+									</div>-->
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv4">
+									<a class="menuNew__link" href="#">Акции</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv4">
+									<a class="menuNew__link" href="#">Винные шкафы</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv3">
+									<a class="menuNew__link" href="#">Диспенсеры</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv3">
+									<a class="menuNew__link" href="#">Аксессуары</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv2">
+									<a class="menuNew__link" href="#">Мини-бары</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv2">
+									<a class="menuNew__link" href="#">Хьюмидоры</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv">
+									<a class="menuNew__link" href="#">Витрины</a>
+								</li>
+								<li class="menuNew__item menuNew__link-adaptiv">
+									<a class="menuNew__link" href="#">Стеллажи</a>
+								</li>
+							</ul>
+							
+						</div>
+						<div class="menuNew__right">
+							<ul class="menuNew__right-list">
+								<li class="menuNew__right-item">
+									<a class="menuNew__link" href="#">Блог</a>
+								</li>
+								<li class="menuNew__right-item">
+									<a class="menuNew__link" href="#">Видео</a>
+								</li>
+							</ul>
+						</div>
+						<div class="menuNew__right-adaptiv">
+							<div class="wrapper-right-block-adaptiv">
+								<div class="header-block__item-phone">
+									<img src="/catalog/view/theme/unishop2/image/Phone.svg" alt="">
+								</div>
+								<div class="header-block__item-wishlistNew header-block__item">
+									<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}"><i class="header-wishlist__icon  fa-heart"></i><span class="header-wishlist__total-items">{{ wishlist.total }}</span></div>
+								</div>
+								<div class="header-block__item header-block__item-cart header-block__item-cartNew">{{ cart }}</div>
+							</div>
+							<div class="icon-mobMenu">
+								<img class="icon-mobMenu__img" src="/catalog/view/theme/unishop2/image/align-justify.svg" alt="">
+							</div>
+						</div>
 					</div>
-					<div class="menuNew__right">
-						<ul class="menuNew__right-list">
-							<li class="menuNew__right-item">
-								<a href="#">Блог</a>
+					<div class="menu-wrapper-mobile">
+						<ul class="menu-wrapper-mobile__list">
+							<li class="menu-wrapper-mobile__item">
+								<a class="menuNew__link menu-wrapper-mobile__link" href="#">Акции</a>
 							</li>
-							<li class="menuNew__right-item">
-								<a href="#">Видео</a>
+							<li class="menu-wrapper-mobile__item">
+								<a class="menuNew__link menu-wrapper-mobile__link" href="#">Винные шкафы</a>
+							</li>
+							<li class="menu-wrapper-mobile__item">
+								<a class="menuNew__link menu-wrapper-mobile__link" href="#">Блог</a>
+							</li>
+							<li class="menu-wrapper-mobile__item">
+								<a class="menuNew__link menu-wrapper-mobile__link" href="#">Видео</a>
 							</li>
 						</ul>
 					</div>

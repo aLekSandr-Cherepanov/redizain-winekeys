@@ -29,6 +29,18 @@
     content: ""!important;
 }
 
+#logo {
+    width: 148px;
+    padding-bottom: 0px;
+
+}
+
+.row {
+    margin: 0px!important;
+    margin-right: 0px!important;;
+    margin-left: 0px!important;;
+}
+
 .header-search__form {
     max-width: 730px;
 }
@@ -69,6 +81,11 @@
     gap: 12px;
 }
 
+.header-top__phone {
+    display: flex;
+    align-items: center;
+}
+
 .header-top__location {
     display: flex;
     gap: 12px;
@@ -77,6 +94,7 @@
 
 .header-top__menu-item a {
     color: black;
+    font-weight: 300;
 }
 
 .header-block__item-search {
@@ -87,7 +105,7 @@
 .wrapper-right-block {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
 }
 
 .wrapper-right-block .header-block__item-wishlistNew {
@@ -120,4 +138,35 @@
 .menuNew__right-list, .menuNew__list {
     display: flex;
     gap: 24px;
+    align-items: center;
+}
+
+.menuNew__item {
+    padding: 0;
+}
+
+.menuNew__button-arrow {
+    margin-left: 4px;
+}
+
+.menuNew__link {
+    color: black;
+    font-weight: 400;
+}
+
+.menuNew__button a {
+    color: white;
+}
+
+.menuNew__button {
+    background-color: #F96158;
+    padding: 10px 8px 10px 16px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .header-search {
+        max-width: 724px;
+        margin-left: 24px;
+    }
 }

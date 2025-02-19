@@ -1,0 +1,92 @@
+<style>
+    .brands-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); /* 5 колонок на ПК */
+        gap: 10px;
+        max-width: 1500px; /* Подстроить под нужную ширину */
+        margin: 0 auto;
+    }
+
+    .brand {
+        width: 286px;
+        height: 80px;
+        background: #f8f8f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .brand img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+    }
+
+    .brand-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #F6F6F6;
+        border-radius: 10px;
+    }
+
+    .brand-item img {
+        padding: 10px;
+    }
+
+    /* Адаптив для планшетов (3 бренда в ряду) */
+    @media (max-width: 1200px) {
+        .brands-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* Адаптив для мобилок (2 бренда в ряду) */
+    @media (max-width: 768px) {
+        .brands-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* Адаптив для узких экранов (1 бренд в ряду) */
+    @media (max-width: 480px) {
+        .brands-container {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>
+<h2 style="text-align: center;">Мы работаем с лучшими брендами</h2>
+    <div class="brands-container">
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/vtl.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/EN.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/logo (1) 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/gemm-top-nero 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/Eurocave_Logo_800X600px_clr 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/logo 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/bermar_black_logo 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/Logo_Enofrigo 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/logo (2) 1.png" alt="Brand">
+        </div>
+        <div class="brand-item">
+            <img src="/catalog/view/theme/unishop2/image/html-module-brends/Wineemotion-logo-web 1.png" alt="Brand">
+        </div>
+    </div>
