@@ -1,11 +1,10 @@
 
     <style>
-        .wine-cabinet-section {
+        .wine-cabinet-section1 {
             width: 100%;
             max-width: 1470px;
             height: 388px;
             margin: 0 auto;
-            padding: 20px;
             background-color: #f8f8f8;
             display: flex;
             align-items: center;
@@ -13,18 +12,36 @@
             position: relative;
             margin-top: 247px;
         }
+        .wine-cabinet-section2 {
+            height: 404px;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 247px;
+        }
+
+        .wine-cabinet-section3 {
+            height: 428px;
+            background-color: #f8f8f8;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 247px;
+        }
 
         .text-content {
-            width: 45%;
+            width: 55%;
+            padding: 20px;
         }
 
         .text-content h2 {
-            font-size: 24px;
+            font-size: 32px;
             margin-bottom: 10px;
         }
 
         .text-content p {
-            font-size: 16px;
+            font-size: 20px;
             color: #555;
             margin-bottom: 15px;
         }
@@ -35,8 +52,9 @@
         }
 
         .features li {
-            font-size: 16px;
-            margin-bottom: 5px;
+            font-size: 20px;
+            margin-bottom: 24px;
+            padding: 0;
             display: flex;
             align-items: center;
         }
@@ -56,7 +74,7 @@
             color: white;
             padding: 10px 20px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
         .wrapper-cabinets {
@@ -74,6 +92,22 @@
             height: 100%;
         }
 
+        .cabinetImg1 {
+            max-height: 329px;
+        }
+
+        .cabinetImg2 {
+            margin-left: 89px;
+        }
+
+        .cabinetImg21 {
+            display: none;
+        }
+
+        .cabinets-block2 {
+            display: flex;
+        }
+
         .cabinet {
             margin-left: 20px;
         }
@@ -83,12 +117,20 @@
         }
 
         @media (max-width: 1200px) {
-            .wine-cabinet-section {
+            .wine-cabinet-section1, .wine-cabinet-section2, .wine-cabinet-section3 {
                 height: auto;
             }
 
             .text-content {
                 margin-bottom: 20px;
+            }
+
+            .cabinetImg2 {
+                display: none;
+            }
+            .cabinetImg21 {
+            display: block;
+            margin-left: 19px;
             }
 
             .cabinets {
@@ -108,7 +150,7 @@
             }
         }
         @media (max-width: 850px) {
-            .wine-cabinet-section {
+            .wine-cabinet-section1, .wine-cabinet-section2, .wine-cabinet-section3 {
                 flex-direction: column;
             }
             .wrapper-cabinets {
@@ -126,25 +168,71 @@
         }
     </style>
 
-<div class="wine-cabinet-section">
-    <div class="text-content">
-        <h2>ТОП винных шкафов для дома 2025 года</h2>
-        <p>Ищете идеальный винный шкаф? Мы собрали лучшие модели 2025 года, сочетающие качество и стиль. Узнайте, какие характеристики важны, выберите лучший вариант!</p>
-        <ul class="features">
-            <li>Премиальное профессиональное оборудование</li>
-            <li>Вместимость от нескольких бутылок до крупных коллекций</li>
-            <li>Низкий уровень шума — тихая работа</li>
-        </ul>
-        <a href="#" class="cta-button">
-            <span class="cta-button__text">Читать статью</span>
-            <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="Стрелка">
-        </a>
-    </div>
-    <div class="wrapper-cabinets">
-        <div class="cabinets">
-            <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf1.png" alt="Шкаф 1" class="cabinet">
-            <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf2.png" alt="Шкаф 2" class="cabinet">
+<section class="wine-cabinet">
+    <div class="wine-cabinet-section1">
+        <div class="text-content">
+            <h2>ТОП винных шкафов для дома 2025 года</h2>
+            <p>Ищете идеальный винный шкаф? Мы собрали лучшие модели 2025 года, сочетающие качество и стиль. Узнайте, какие характеристики важны, выберите лучший вариант!</p>
+            <ul class="features">
+                <li>Премиальное профессиональное оборудование</li>
+                <li>Вместимость от нескольких бутылок до крупных коллекций</li>
+                <li>Низкий уровень шума — тихая работа</li>
+            </ul>
+            <a href="#" class="cta-button">
+                <span class="cta-button__text">Читать статью</span>
+                <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="Стрелка">
+            </a>
         </div>
-        <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf3.png" alt="Шкаф 3" class="cabinet large">
+        <div class="wrapper-cabinets">
+            <div class="cabinets">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf1.png" alt="Шкаф 1" class="cabinet">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf2.png" alt="Шкаф 2" class="cabinet">
+            </div>
+            <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf3.png" alt="Шкаф 3" class="cabinet large">
+        </div>
     </div>
-</div>
+    <div class="wine-cabinet-section2">
+        <div class="text-content">
+            <h2>ТОП встраиваемых под столешницу винных шкафов 2025 года</h2>
+            <p>Идеальные решения для хранения вина прямо под столешницей! Откройте для себя встраиваемые винные шкафы в нашей статье!</p>
+            <ul class="features">
+                <li>Для небольших кухонь и барных зон</li>
+                <li>Функциональность и эстетичность</li>
+                <li>Гармонично вписываются в интерьеры</li>
+            </ul>
+            <a href="#" class="cta-button">
+                <span class="cta-button__text">Читать статью</span>
+                <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="Стрелка">
+            </a>
+        </div>
+        <div class="wrapper-cabinets-block2">
+            <div class="cabinets-block2">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino A-20D.png" alt="Шкаф 1" class="cabinetImg1">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living.png" alt="Шкаф 2" class="cabinetImg2">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living-room1.png" alt="Шкаф 11" class="cabinetImg21">
+            </div>
+        </div>
+    </div>
+    <div class="wine-cabinet-section3">
+        <div class="text-content">
+            <h2>ТОП винных шкафов для дома 2025 года</h2>
+            <p>Ищете идеальный винный шкаф? Мы собрали лучшие модели 2025 года, сочетающие качество и стиль. Узнайте, какие характеристики важны, выберите лучший вариант!</p>
+            <ul class="features">
+                <li>Премиальное профессиональное оборудование</li>
+                <li>Вместимость от нескольких бутылок до крупных коллекций</li>
+                <li>Низкий уровень шума — тихая работа</li>
+            </ul>
+            <a href="#" class="cta-button">
+                <span class="cta-button__text">Читать статью</span>
+                <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="Стрелка">
+            </a>
+        </div>
+        <div class="wrapper-cabinets">
+            <div class="cabinets">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf1.png" alt="Шкаф 1" class="cabinet">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf2.png" alt="Шкаф 2" class="cabinet">
+            </div>
+            <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf3.png" alt="Шкаф 3" class="cabinet large">
+        </div>
+    </div>
+</section>
