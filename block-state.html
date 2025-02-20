@@ -3,7 +3,6 @@
         .wine-cabinet-section1 {
             width: 100%;
             max-width: 1470px;
-            height: 388px;
             margin: 0 auto;
             background-color: #f8f8f8;
             display: flex;
@@ -13,21 +12,19 @@
             margin-top: 247px;
         }
         .wine-cabinet-section2 {
-            height: 404px;
             background-color: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 247px;
+            margin-top: 10px;
         }
 
         .wine-cabinet-section3 {
-            height: 428px;
             background-color: #f8f8f8;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            margin-top: 247px;
+            margin-top: 10px;
         }
 
         .text-content {
@@ -106,6 +103,7 @@
 
         .cabinets-block2 {
             display: flex;
+            gap: 17px;
         }
 
         .cabinet {
@@ -114,6 +112,45 @@
 
         .cabinet.large {
             width: 240px;
+        }
+
+        .wrapper-cabinets-block3 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .text-content-block3 {
+            width: 50%;
+            padding: 20px;
+        }
+        .text-content-block3 h2 {
+            font-size: 32px;
+        }
+        
+        .text-content-block3 p {
+            font-size: 20px;
+        }
+        .cabinets-block3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .cabinetImg-dop {
+            display: none;
+        }
+
+        .cabinetImg-dop1 {
+            display: none;
+        }
+
+        .cabinetImg-dop11 {
+            display: none;
+        }
+
+        .cabinetImg-dop22 {
+            display: none;
         }
 
         @media (max-width: 1200px) {
@@ -148,7 +185,44 @@
                 width: 284px;
                 position: static;
             }
+
+            .cabinetImg3 {
+                display: none;
+            }
+
+            .cabinetImg-dop {
+            display: block;
+            }
+
+            .cta-button {
+                max-width: 505px;
+            }
         }
+
+        @media (max-width: 960px) {
+            .cabinetImg-dop1 {
+                display: block;
+            }
+            .cabinetImg-dop {
+            display: none;
+            }
+
+            .wrapper-cabinets-block3 {
+                gap: 19px;
+            }
+
+            .cabinets-block3 {
+                justify-content: space-around;
+            }
+            .cabinetImg-dop11 {
+            display: block;
+            }
+            .cabinetImg21 {
+                display: none;
+            }
+        }
+
+
         @media (max-width: 850px) {
             .wine-cabinet-section1, .wine-cabinet-section2, .wine-cabinet-section3 {
                 flex-direction: column;
@@ -165,7 +239,52 @@
             .cabinet.large {
                 width: 195px;
             }
+            .wine-cabinet-section1, .wine-cabinet-section2, .wine-cabinet-section3 {
+                margin-top: 10px;
+            }
+
+            .text-content-block3 {
+                width: 100%;
+            }
+
+            .cabinetImg-dop22 {
+                display: block;
+            }
+
+            .cabinetImg-dop11 {
+                display: none;
+            }
         }
+
+        .cabinetImg {
+            width: 100%; /* или нужная ширина */
+            height: 400px; /* установи нужную высоту */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb2-6 1.png'); /* по умолчанию большое изображение */
+        }
+
+        @media (max-width: 1200px) {
+            .cabinetImg {
+                background-image: url('/catalog/view/theme/unishop2/image/html-module-state/mv421.png');
+            }
+        }
+
+        @media (max-width: 600px) {
+            .cabinetImg {
+                background-image: url('/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb2-6 1-1.png');
+            }
+        }
+
+        @media (max-width: 400px) {
+            .cabinetImg {
+                background-image: url('/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb2-6 122.png');
+            }
+        }
+
+
+
     </style>
 
 <section class="wine-cabinet">
@@ -210,29 +329,34 @@
                 <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino A-20D.png" alt="Шкаф 1" class="cabinetImg1">
                 <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living.png" alt="Шкаф 2" class="cabinetImg2">
                 <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living-room1.png" alt="Шкаф 11" class="cabinetImg21">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_li.png" alt="Шкаф 3" class="cabinetImg-dop11">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2111.png" alt="Шкаф 3" class="cabinetImg-dop22">
             </div>
         </div>
     </div>
     <div class="wine-cabinet-section3">
-        <div class="text-content">
-            <h2>ТОП винных шкафов для дома 2025 года</h2>
-            <p>Ищете идеальный винный шкаф? Мы собрали лучшие модели 2025 года, сочетающие качество и стиль. Узнайте, какие характеристики важны, выберите лучший вариант!</p>
+        <div class="text-content-block3">
+            <h2>ТОП встраиваемых под нишу винных шкафов 2025 года</h2>
+            <p>Встраиваемые в нишу винные шкафы – идеальный выбор для хранения без ущерба дизайну. Читайте статью и выбирайте свой вариант!</p>
             <ul class="features">
-                <li>Премиальное профессиональное оборудование</li>
-                <li>Вместимость от нескольких бутылок до крупных коллекций</li>
-                <li>Низкий уровень шума — тихая работа</li>
+                <li>Интегрируются в кухонные гарнитуры или мебельные ниши, </li>
+                <li>Стабильная температура и влажность</li>
+                <li>Современные стильные модели</li>
             </ul>
             <a href="#" class="cta-button">
                 <span class="cta-button__text">Читать статью</span>
                 <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="Стрелка">
             </a>
         </div>
-        <div class="wrapper-cabinets">
-            <div class="cabinets">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf1.png" alt="Шкаф 1" class="cabinet">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf2.png" alt="Шкаф 2" class="cabinet">
+        <div class="wrapper-cabinets-block3">
+            <div class="cabinets-block3">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino B-18S_03 1.png" alt="Шкаф 1" class="">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/caso-wine-safe-18_front_jpeg 1.png" alt="Шкаф 2" class="">
             </div>
-            <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf3.png" alt="Шкаф 3" class="cabinet large">
+            <!--<img src="/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb2-6 1.png" alt="Шкаф 3" class="cabinetImg3">
+            <img src="/catalog/view/theme/unishop2/image/html-module-state/mv421.png" alt="Шкаф 3" class="cabinetImg-dop">
+            <img src="/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb111.png" alt="Шкаф 3" class="cabinetImg-dop1">-->
+            <div class="cabinetImg"></div>
         </div>
     </div>
 </section>
