@@ -1,0 +1,69 @@
+<style>
+
+    .container-new {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .service-card {
+        width: 710px;
+        height: 710px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .overlay-new {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(246, 246, 246, 0.9);
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        background: #FF6B6B;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 5px;
+        margin-top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    @media (max-width: 640px) {
+        .container-new {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .service-card {
+            width: 100%;
+            max-width: 710px;
+        }
+    }
+</style>
+
+<div class="container-new">
+    <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+        <div class="overlay-new">
+            <h2>Винные шкафы</h2>
+            <a href="#" class="button">Перейти в раздел</a>
+        </div>
+    </div>
+    <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+        <div class="overlay-new">
+            <h2>Винные погреба</h2>
+            <a href="#" class="button">Перейти в раздел</a>
+        </div>
+    </div>
+</div>
