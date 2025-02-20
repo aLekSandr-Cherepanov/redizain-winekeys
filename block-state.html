@@ -1,5 +1,7 @@
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
         .wine-cabinet-section1 {
             width: 100%;
             max-width: 1470px;
@@ -33,33 +35,39 @@
         }
 
         .text-content h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
             font-size: 32px;
             margin-bottom: 10px;
         }
 
         .text-content p {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
             font-size: 20px;
             color: #555;
             margin-bottom: 15px;
         }
 
         .features {
+            display: flex;
             list-style: none;
             margin-bottom: 20px;
+            flex-direction: column;
+            gap: 26px;
         }
 
-        .features li {
-            font-size: 20px;
-            margin-bottom: 24px;
-            padding: 0;
+        .kvadrat-text {
             display: flex;
+            gap: 12px;
             align-items: center;
         }
 
-        .features li::before {
-            content: "■";
-            color: gray;
-            margin-right: 8px;
+        .features li {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 20px;
+            padding: 0;
         }
 
         .cta-button {
@@ -108,6 +116,13 @@
 
         .cabinet {
             margin-left: 20px;
+        }
+
+        .block-cabinetImg {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
         }
 
         .cabinet.large {
@@ -290,12 +305,21 @@
 <section class="wine-cabinet">
     <div class="wine-cabinet-section1">
         <div class="text-content">
-            <h2>ТОП винных шкафов для дома 2025 года</h2>
-            <p>Ищете идеальный винный шкаф? Мы собрали лучшие модели 2025 года, сочетающие качество и стиль. Узнайте, какие характеристики важны, выберите лучший вариант!</p>
+            <h2>ТОП винных шкафов для дома 2025 года</h2>  
+                <p>Ищете идеальный винный шкаф? Мы собрали лучшие модели 2025 года, сочетающие качество и стиль. Узнайте, какие характеристики важны, выберите лучший вариант!</p>
             <ul class="features">
-                <li>Премиальное профессиональное оборудование</li>
-                <li>Вместимость от нескольких бутылок до крупных коллекций</li>
-                <li>Низкий уровень шума — тихая работа</li>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Премиальное профессиональное оборудование</li>
+                </div>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Вместимость от нескольких бутылок до крупных коллекций</li>
+                </div>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Низкий уровень шума- тихая работа</li>
+                </div>
             </ul>
             <a href="#" class="cta-button">
                 <span class="cta-button__text">Читать статью</span>
@@ -304,10 +328,19 @@
         </div>
         <div class="wrapper-cabinets">
             <div class="cabinets">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf1.png" alt="Шкаф 1" class="cabinet">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf2.png" alt="Шкаф 2" class="cabinet">
+                <div class="block-cabinetImg">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf1.png" alt="Шкаф 1" class="cabinet">
+                    <p>ABCino A-54D</p>
+                </div>
+                <div class="block-cabinetImg">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf2.png" alt="Шкаф 2" class="cabinet">
+                    <p>Meyvel MV33-KBF2</p>
+                </div>
             </div>
-            <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf3.png" alt="Шкаф 3" class="cabinet large">
+            <div class="block-cabinetImg">
+                <img src="/catalog/view/theme/unishop2/image/html-module-state/schkaf3.png" alt="Шкаф 3" class="cabinet large">
+                <p>Meyvel MV110-KBT2 Slim</p>
+            </div>
         </div>
     </div>
     <div class="wine-cabinet-section2">
@@ -315,9 +348,18 @@
             <h2>ТОП встраиваемых под столешницу винных шкафов 2025 года</h2>
             <p>Идеальные решения для хранения вина прямо под столешницей! Откройте для себя встраиваемые винные шкафы в нашей статье!</p>
             <ul class="features">
-                <li>Для небольших кухонь и барных зон</li>
-                <li>Функциональность и эстетичность</li>
-                <li>Гармонично вписываются в интерьеры</li>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Для небольших кухонь и барных зон</li>
+                </div>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Функциональность и эстетичность</li>
+                </div>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Гармонично вписываются в интерьеры</li>
+                </div>
             </ul>
             <a href="#" class="cta-button">
                 <span class="cta-button__text">Читать статью</span>
@@ -326,11 +368,26 @@
         </div>
         <div class="wrapper-cabinets-block2">
             <div class="cabinets-block2">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino A-20D.png" alt="Шкаф 1" class="cabinetImg1">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living.png" alt="Шкаф 2" class="cabinetImg2">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living-room1.png" alt="Шкаф 11" class="cabinetImg21">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_li.png" alt="Шкаф 3" class="cabinetImg-dop11">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2111.png" alt="Шкаф 3" class="cabinetImg-dop22">
+                <div class="block-cabinetImg">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino A-20D.png" alt="Шкаф 1" class="cabinetImg1">
+                    <p>ABCino A-20D</p>
+                </div>
+                <div class="block-cabinetImg cabinetImg2">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living.png" alt="Шкаф 2" class="">
+                    <p>Meyvel MV46NH-KBT2</p>
+                </div>
+                <div class="block-cabinetImg cabinetImg21">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_living-room1.png" alt="Шкаф 11" class="">
+                    <p>Meyvel MV46NH-KBT2</p>
+                </div>
+                <div class="block-cabinetImg cabinetImg-dop11">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2_li.png" alt="Шкаф 3" class="">
+                    <p>Meyvel MV46NH-KBT2</p>
+                </div>
+                <div class="block-cabinetImg cabinetImg-dop22">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/Meyvel-MV46NH-KBT2111.png" alt="Шкаф 3" class="">
+                    <p>Meyvel MV46NH-KBT2</p>
+                </div>
             </div>
         </div>
     </div>
@@ -339,9 +396,18 @@
             <h2>ТОП встраиваемых под нишу винных шкафов 2025 года</h2>
             <p>Встраиваемые в нишу винные шкафы – идеальный выбор для хранения без ущерба дизайну. Читайте статью и выбирайте свой вариант!</p>
             <ul class="features">
-                <li>Интегрируются в кухонные гарнитуры или мебельные ниши, </li>
-                <li>Стабильная температура и влажность</li>
-                <li>Современные стильные модели</li>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Интегрируются в кухонные гарнитуры или мебельные ниши,</li>
+                </div>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Стабильная температура и влажность</li>
+                </div>
+                <div class="kvadrat-text">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                    <li>Современные стильные модели</li>
+                </div>
             </ul>
             <a href="#" class="cta-button">
                 <span class="cta-button__text">Читать статью</span>
@@ -350,13 +416,22 @@
         </div>
         <div class="wrapper-cabinets-block3">
             <div class="cabinets-block3">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino B-18S_03 1.png" alt="Шкаф 1" class="">
-                <img src="/catalog/view/theme/unishop2/image/html-module-state/caso-wine-safe-18_front_jpeg 1.png" alt="Шкаф 2" class="">
+                <div class="block-cabinetImg">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/ABCino B-18S_03 1.png" alt="Шкаф 1" class="">
+                    <p>ABCino B-18S</p>
+                </div>
+                <div class="block-cabinetImg">
+                    <img src="/catalog/view/theme/unishop2/image/html-module-state/caso-wine-safe-18_front_jpeg 1.png" alt="Шкаф 2" class="">
+                    <p>Caso WineSafe 18 EB black</p>
+                </div>
             </div>
             <!--<img src="/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb2-6 1.png" alt="Шкаф 3" class="cabinetImg3">
             <img src="/catalog/view/theme/unishop2/image/html-module-state/mv421.png" alt="Шкаф 3" class="cabinetImg-dop">
             <img src="/catalog/view/theme/unishop2/image/html-module-state/mv42-kbb111.png" alt="Шкаф 3" class="cabinetImg-dop1">-->
-            <div class="cabinetImg"></div>
+            <div class="block-cabinetImg">
+                <div class="cabinetImg"></div>
+                <p>Dunavox DAVS-18.46SS</p>
+            </div>
         </div>
     </div>
 </section>
