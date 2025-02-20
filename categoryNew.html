@@ -1,5 +1,21 @@
 <style>
 
+    .h2-new-catalog {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 32px;
+    }
+
+    .p-new-catalog {
+        max-width: 560px;
+        font-size: 20px;
+    }
+
+    .new-catalog-container {
+        display: flex;
+        gap: 50px;
+        flex-direction: column;
+    }
     .container-new {
         display: flex;
         justify-content: center;
@@ -27,6 +43,26 @@
         color: white;
         text-align: center;
         padding: 20px;
+        border-radius: 10px;
+    }
+
+    .overlay-new h2 {
+        font-size: 32px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        margin-bottom: 12px;
+    }
+
+    .overlay-new a {
+        display: inline-block;
+        width: 100%;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
+        background: #FF6B6B;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 15px;
     }
 
     .button {
@@ -40,30 +76,152 @@
         font-weight: bold;
     }
 
+    @media (max-width: 1200px) {
+        .service-card {
+            width: 495px;
+            height: 513px;
+        }
+    }
+
+    @media (max-width: 960px) {
+        .service-card {
+            width: 425px;
+            height: 420px;
+        }
+    }
+
     @media (max-width: 640px) {
+        .new-catalog-container {
+            gap: 10px;
+        }
         .container-new {
             flex-direction: column;
             align-items: center;
+            gap: 10px;
         }
 
         .service-card {
             width: 100%;
             max-width: 710px;
         }
+
+        .overlay-new h2 {
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+
+        .overlay-new a {
+            padding: 9px 0;
+            margin: 0;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .service-card {
+            width: 100%;
+            max-width: 335px;
+            height: 335px;
+        }
+        .h2-new-catalog {
+            font-size: 26px;
+        }
+        .p-new-catalog {
+            line-height: 26px !important;
+            margin-bottom: 24px;
+        }
     }
 </style>
 
-<div class="container-new">
-    <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
-        <div class="overlay-new">
-            <h2>Винные шкафы</h2>
-            <a href="#" class="button">Перейти в раздел</a>
+<div class="new-catalog">
+    <h2 class="h2-new-catalog">Каталог</h2>
+    <p class="p-new-catalog">В нашем каталоге вы найдете широкий выбор винных шкафов: встраиваемые, отдельно стоящие, с разными зонами охлаждения 
+        и стильным дизайном. Выберите модель, которая подчеркнет 
+        ваш вкус и обеспечит вашим винам идеальные условия!
+    </p>
+    <div class="new-catalog-container">
+        <div class="container-new">
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы Winekeys</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
-        <div class="overlay-new">
-            <h2>Винные погреба</h2>
-            <a href="#" class="button">Перейти в раздел</a>
+        <div class="container-new">
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы Winekeys</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-new">
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы Winekeys</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-new">
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы Winekeys</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-new">
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы Winekeys</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-new">
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
+            <div class="service-card" style="background-image: url('/catalog/view/theme/unishop2/image/catalog-new/schkaf-catalog1.png');">
+                <div class="overlay-new">
+                    <h2>Винные шкафы Winekeys</h2>
+                    <a href="#" class="button-category">Перейти в раздел</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
