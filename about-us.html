@@ -2,6 +2,29 @@
     .about-section {
         background: #ffffff00;
     }
+
+    .wrapper-social-icon-text {
+        display: flex;
+        max-width: 681px;
+        flex-direction: column;
+        margin-bottom: 24px;
+    }
+
+    .wrapper-social-icon-text p  {
+        color: #F96158 !important;
+    }
+
+    .about-section p {
+        font-weight: 600;
+        font-size: 18px;
+        color: #F96158;
+    }
+
+    .social-icon {
+        display: flex;
+        align-items: flex-end;
+        gap: 12px;
+    }
     .container-about {
         display: flex;
         flex-direction: column;
@@ -13,6 +36,8 @@
         gap: 50px;
     }
     .video-about {
+        width: 710px;
+        height: 360px;
         position: relative;
         background: #ccc;
         display: flex;
@@ -20,10 +45,6 @@
         justify-content: center;
         color: white;
         font-size: 20px;
-    }
-    .video-about.small {
-        width: 710px;
-        height: 360px;
     }
     .video-about.large {
         width: 100%;
@@ -88,6 +109,67 @@
     .info-block h2 {
         margin-bottom: 15px;
     }
+
+    .herro-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .small1 {
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/catalog/view/theme/unishop2/image/about-us/video11.png');
+    }
+
+    .small2 {
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/catalog/view/theme/unishop2/image/about-us/video12.png');
+    }
+
+    .large {
+        border-radius: 10px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('/catalog/view/theme/unishop2/image/about-us/video13.png');
+    }
+
+    @media (max-width: 1200px) {
+        .small1 {
+            width: 495px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video1-1200.png');
+        }
+        .small2 {
+            width: 495px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video2-1200.png');
+        }
+        .large {
+            width: 1040px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video3-1200.png');
+        }
+    }
+
+    @media (max-width: 960px) {
+        .small1 {
+            width: 425px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video1-960.png');
+        }
+        .small2 {
+            width: 425px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video2-960.png');
+        }
+        .large {
+            width: 900px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video3-960.png');
+        }
+    }
+
     @media (max-width: 640px) {
         .videos-about {
             flex-direction: column;
@@ -101,23 +183,83 @@
         .info {
             flex-direction: column;
         }
+
+        .small1 {
+            max-width: 580px;
+            width: 100%;
+            height: 580px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video1-640.png');
+        }
+        .small2 {
+            max-width: 580px;
+            width: 100%;
+            height: 580px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video2-640.png');
+        }
+        .video-about.large {
+            max-width: 580px;
+            width: 100%;
+            height: 580px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video3-640.png');
+        }
     }
+
+    @media (max-width: 540px) {
+        .small1 {
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video1-540.png');
+        }
+        .small2 {
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video2-540.png');
+        }
+        .video-about.large {
+            max-width: 335px;
+            width: 100%;
+            height: 335px;
+            background-image: url('/catalog/view/theme/unishop2/image/about-us/image-video3-450.png');
+        }
+
+        .info {
+            background-color: white;
+            gap: 40px;
+        }
+
+        .info-block {
+            padding: 0;
+        }
+
+        .kvadrat-h2 {
+            font-size: 26px;
+        }
+
+        .herro-info {
+            gap: 24px;
+        }
+    }
+
 </style>
 
 <section class="about-section">
-    <div class="container-about">
+    <div class="wrapper-social-icon-text">
+        <p>Мы в рутюбе и ютубе</p>
+        <h2 class="h2-new-catalog">Лучшие винные шкафы: обзор, советы и рекомендации</h2>
+        <div class="social-icon">
+            <img src="/catalog/view/theme/unishop2/image/about-us/rutube.svg" alt="">
+            <img src="/catalog/view/theme/unishop2/image/about-us/youtube.svg" alt="">
+        </div>
+    </div>
+    <div class="container-about"> 
         <div class="videos-about">
-            <div class="video-about small">
-                <img src="/catalog/view/theme/unishop2/image/about-us/video11.png" alt="Видео-1">
-            </div>
-            <div class="video-about small">
-                <img src="/catalog/view/theme/unishop2/image/about-us/video12.png" alt="Видео-2">
-            </div>
+            <div class="video-about small1"></div><!--видео1-->
+            <div class="video-about small2"></div><!--видео2-->
         </div>
         <div class="herro-info">
-            <div class="video-about large">
-                <img src="/catalog/view/theme/unishop2/image/about-us/video13.png" alt="Видео-3">
-            </div>
+            <div class="video-about large"></div><!--видео3-->
             <div class="info">
                 <div class="info-block">
                     <h2 class="kvadrat-h2">О нас</h2>
