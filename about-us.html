@@ -1,0 +1,163 @@
+<style>
+    .about-section {
+        background: #ffffff00;
+    }
+    .container-about {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    .videos-about {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+    .video-about {
+        position: relative;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+    }
+    .video-about.small {
+        width: 710px;
+        height: 360px;
+    }
+    .video-about.large {
+        width: 100%;
+        height: 379px;
+    }
+    .video-about img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .video-overlay {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background: rgba(246, 246, 246, 0.9);
+        color: #000;
+        text-align: center;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 50px;
+        background-color: #F6F6F6;
+    }
+    .info-block {
+        flex: 1;
+        min-width: 300px;
+        padding: 24px 20px;
+    }
+
+    .kvadrat-h2 {
+        font-size: 32px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+    }
+
+    .kvadrat_about-us {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .kvadrat-text {
+        align-items: flex-start;
+    }
+
+    .kvadrat-text li {
+        padding: 0;
+    }
+
+    .kvadrat-text img {
+        padding-top: 4px;
+    }
+    .info-block h2 {
+        margin-bottom: 15px;
+    }
+    @media (max-width: 640px) {
+        .videos-about {
+            flex-direction: column;
+            align-items: center;
+        }
+        .video.small {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16 / 9;
+        }
+        .info {
+            flex-direction: column;
+        }
+    }
+</style>
+
+<section class="about-section">
+    <div class="container-about">
+        <div class="videos-about">
+            <div class="video-about small">
+                <img src="/catalog/view/theme/unishop2/image/about-us/video11.png" alt="Видео-1">
+            </div>
+            <div class="video-about small">
+                <img src="/catalog/view/theme/unishop2/image/about-us/video12.png" alt="Видео-2">
+            </div>
+        </div>
+        <div class="herro-info">
+            <div class="video-about large">
+                <img src="/catalog/view/theme/unishop2/image/about-us/video13.png" alt="Видео-3">
+            </div>
+            <div class="info">
+                <div class="info-block">
+                    <h2 class="kvadrat-h2">О нас</h2>
+                    <ul class="kvadrat_about-us">
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>2014 год — старт запуска нашей компании, которая специализируется на оборудовании для хранения вина</li>
+                        </div>
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>В нашем интернет-магазине представлены винные шкафы >30 самых известных мировых брендов</li>
+                        </div>
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>В 2019 году мы запустили собственное серийное производство</li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h2 class="kvadrat-h2">Наши преимущества</h2>
+                    <ul class="kvadrat_about-us">
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>Открыты 2 мультибрендовых выставочных зала в Москве и Санкт-Петербурге</li>
+                        </div>
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>Собственный сервисный центр и отдел разработки</li>
+                        </div>
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>Представляем более 30 брендов по винному оборудованию</li>
+                        </div>
+                        <div class="kvadrat-text">
+                            <img src="/catalog/view/theme/unishop2/image/html-module-state/kvadrat.svg" alt="kvadrat">
+                            <li>Установлено более 3600 винных шкафов, более 50 диспенсеров</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
