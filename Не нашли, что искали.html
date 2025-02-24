@@ -1,7 +1,6 @@
 <style>
     .custom-wine {
     text-align: center;
-    padding: 40px 20px;
 }
 
 
@@ -17,9 +16,35 @@
     justify-content: center;
 }
 
+.wrapper-h2-text {
+    text-align: left;
+    max-width: 710px;
+}
+
+.na-zakazz {
+    color: #fff;
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.wrapper-h2-block {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.wrapper-h2-text p {
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
 .custom-wine-content {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    background: rgb(0 0 0 / 0%);
     border-radius: 8px;
     color: white;
     text-align: center;
@@ -34,25 +59,61 @@
 .btn-banner {
     display: inline-block;
     padding: 10px 20px;
-    background: #ff4d4d;
+    background: #F96158;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+}
+
+@media (max-width: 640px) {
+    .custom-wine-banner {
+        width: 580px;
+        height: 580px;
+    }
+}
+@media (max-width: 500px) {
+    .custom-wine-banner {
+        width: 100%;
+        height: 335px;
+        background-color: #F6F6F6;
+        color: black;
+        max-width: 100%;
+        align-items: flex-end;
+    }
+
+    .custom-wine-content {
+        background-color: #F6F6F6;
+        color: black;
+        padding: 10px;
+        max-width: 100%;
+    }
+    .na-zakazz {
+        color: black;
+        font-size: 26px;
+    }
+
+    .btn-banner {
+        width: 100%;
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 5px;
+        border-radius: 10px;
+    }
 }
 
 </style>
 
 
 <section class="custom-wine">
-    <div class="container">
-        <h2>Не нашли, что искали?</h2>
+    <div class="wrapper-h2-text">
+        <h2 class="wrapper-h2-block">Не нашли, что искали?</h2>
         <p>
             Изготовление винных шкафов по вашим размерам и требованиям! Мы предлагаем эксклюзивные решения для хранения вина, которые подчеркнут стиль вашего дома и обеспечат идеальные условия для ваших коллекций. Профессиональный подход и внимание к деталям – выберите лучший винный шкаф у нас!
         </p>
     </div>
     <div class="custom-wine-banner">
         <div class="custom-wine-content">
-            <h3>Изготовим винный шкаф на заказ</h3>
+            <h2 class="na-zakazz">Изготовим винный шкаф на заказ</h2>
             <a href="#" class="btn-banner">
                 <span>Перейти</span>
                 <img src="/catalog/view/theme/unishop2/image/mini-arrow-back.svg" alt="">
