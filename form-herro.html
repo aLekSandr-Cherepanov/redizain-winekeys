@@ -1,0 +1,189 @@
+<style>
+    .section-contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 160px;
+    }
+    .contact-form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+    .contact-info {
+        max-width: 280px;
+    }
+
+    .contact-info-h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .social-icons img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .form-container {
+        width: 710px;
+        height: 354px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    input, textarea {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    textarea {
+        height: 80px;
+        resize: none;
+    }
+
+    .privacy {
+        font-size: 12px;
+        color: #888;
+    }
+
+    .privacy input {
+        margin-right: 5px;
+    }
+
+    .privacy a {
+        color: red;
+        text-decoration: none;
+    }
+
+    .button-form-footer {
+        width: 100%;
+        padding: 12px;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .button-form-footer:hover {
+        background: #333;
+    }
+
+    .hunter-linck {
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .hunter {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hunter-linck:hover {
+        color: #fff;
+        background: #333;
+    }
+
+    .hunter-button {
+        max-width: 360px;
+        height: 48px;
+        background: black;
+        display: flex;
+        align-items: center;
+        padding: 12px 32px;
+        border-radius: 15px;
+    }
+
+    @media (max-width: 768px) {
+        .contact-form {
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+
+        }
+
+        .form-container {
+            width: 100%;
+            height: auto;
+        }
+        .contact-info {
+            max-width: 100%;
+        }
+        .hunter {
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+    @media (max-width: 500px) {
+        .contact-form {
+            gap: 30px;
+
+        }
+        .social-icons img {
+            width: 100px;
+            height: 100px;
+        }
+        .social-icons {
+            justify-content: center;
+        }
+    }
+
+</style>
+
+
+<section class="section-contact-form">
+    <div class="contact-form">
+        <div class="contact-info">
+            <h2 class="contact-info-h2">Оформление заявки</h2>
+            <p>Оставьте заявку или напишите нам в наши соц.сети и мы свяжемся с Вами!</p>
+            <div class="social-icons">
+                <a href="#"><img src="/catalog/view/theme/unishop2/image/html-module-ne-naschli/tg.svg" alt="Telegram"></a>
+                <a href="#"><img src="/catalog/view/theme/unishop2/image/html-module-ne-naschli/wats.svg" alt="WhatsApp"></a>
+            </div>
+        </div>
+        <div class="form-container">
+            <form class="form-footer">
+                <input type="text" placeholder="Имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <textarea placeholder="Напишите тут свои пожелания..." required></textarea>
+                <label class="privacy">
+                    <input type="checkbox" required><span>Отправляя свои данные, вы соглашаетесь с</span> <a href="#">политикой конфиденциальности</a>
+                </label>
+                <button class="button-form-footer" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+    <div class="hunter">
+        <div class="hunter-left">
+            <h2 class="contact-info-h2">Хотите к нам в команду?</h2>
+            <span>Напишите нам! Мы всегда открыты к любым предложениям</span>
+        </div>
+        <div class="hunter-button">
+            <a class="hunter-linck" href="">
+                <span class="hunter-linck__text">Читать подробнее о вакансиях</span>
+            </a>
+        </div>
+    </div>
+</section>
