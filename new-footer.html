@@ -1,118 +1,323 @@
 <style>
-.footer {
-    background: #f8f8f8;
-    padding: 20px;
-}
-
-.footer-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.footer-section {
-    width: 30%;
-    margin-bottom: 20px;
-}
-
-/* 📱 Адаптив для экранов меньше 640px */
-@media (max-width: 640px) {
-    .footer-container {
-        flex-direction: column;
+    .footer {
+        background: #f8f8f8;
+        padding: 15px;
     }
-
-    .footer-section {
-        width: 100%;
+    
+    .wrapper2-footer-section {
+        display: flex;
+        gap: 165px;
     }
-
-    .toggle {
-        cursor: pointer;
-        padding: 10px;
-        background: #ddd;
-        border-radius: 5px;
+    
+    .toggle-hero {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        font-size: 22px;
     }
-
+    
+    .wrapper3-footer-section {
+        display: flex;
+        gap: 120px;
+    }
+    .wrapper4-footer-section {
+        display: flex;
+        gap: 18px;
+        justify-content: space-between;
+    }
+    
     .content {
-        display: none;
-        padding-left: 10px;
+        font-size: 18px;
     }
-}
-</style>
-
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <h3>Связаться с нами</h3>
-            <p>sales@winekeys.ru</p>
-            <p>+7 (800) 777-59-34</p>
-            <p>Обратный звонок</p>
-        </div>
+    
+    .wrapper-footer-title-img img {
+        display: none;
+    }
+    
+    .new-footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .footer-section-top {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .footer-section-bottom {
+        display: flex;
+        gap: 156px;
+    }
+    
+    .footer-section {
+        margin-bottom: 20px;
+    }
+    
+    .footer-section-double-adaptive {
+        display: none;
+    }
+    
+    .wrapper-footer-block {
+        display: flex;
+        gap: 160px;
+    }
+    
+    
+    
+    @media (max-width: 1200px) {
+        .footer-section-double-adaptive {
+            display: block;
+            padding-right: 70px;
+        }
+        .footer-section-double {
+            display: none;
+        }
+        .footer-section-top {
+            justify-content: space-between;
+            gap: 90px;
+        }
+        .wrapper2-footer-section {
+            gap: 57px;
+        }
+        .wrapper3-footer-section {
+            gap: 12px;
+            padding-right: 70px;
+        }
+        .footer-section-bottom {
+            display: flex;
+            gap: 250px;
+            padding-right: 30px;
+            justify-content: space-between;
+        }
+        .wrapper-footer-block {
+            display: flex;
+            gap: 50px;
+        }
+    }
+    @media (max-width: 960px) {
+        .footer-section-bottom {
+            display: flex;
+            gap: 230px;
+             padding-right: 0px;
+        }
+        .wrapper-footer-block {
+            display: flex;
+            gap: 10px;
+        }
+        .footer-section-double-adaptive {
+            padding-right: 20px;
+        }
+        .wrapper2-footer-section {
+            gap: 22px;
+        }
+        .wrapper3-footer-section {
+            padding-right: 0px;
+        }
+        .footer-section-top {
+            gap: 54px;
+            padding: 0px;
+        }
+    }
+    
+    
+    /* Адаптив для экранов меньше 640px */
+    @media (max-width: 640px) {
+        .wrapper-footer-title-img {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+            .wrapper-footer-title-img img {
+            display: block;
+        }
+        .new-footer-container {
+            flex-direction: column;
+        }
+    
+        .footer-section {
+            width: 100%;
+            margin: 0px;
+        }
+        .footer {
+            padding: 0px;
+        }
+    
+        .toggle-hero {
+            width: 100%;
+            cursor: pointer;
+            margin: 0px;
+            line-height: 0.8;
+            font-weight: 400;
+            font-size: 32px;
+            padding: 12px 30px;
+        }
+    
+        .content {
+            display: none;
+            padding-left: 10px;
+        }
+        .footer-section-top, .wrapper2-footer-section, .wrapper3-footer-section, .wrapper-footer-block, .footer-section-bottom {
+            flex-direction: column;
+            gap: 0;
+        }
+    
+        .content-adaptive {
+            padding-left: 30px;
+        }
+    
+        .footer-section-double-adaptive {
+            padding-right: 0px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .toggle-hero {
+            font-size: 26px;
+        }
+    }
+    </style>
+    
+    <footer class="footer">
+        <div class="new-footer-container container">
+            <div class="footer-section-top">
+                <div class="wrapper2-footer-section">
+                    <div class="footer-section collapsible">
+                        <div class="toggle wrapper-footer-title-img">
+                            <h3 class="toggle-hero">Связаться с нами</h3>
+                            <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                        </div>
+                        <ul class="content content-adaptive">
+                            <li><a href="#">sales@winekeys.ru</a></li>
+                            <li><a href="#">+7 (800) 777-59-34</a></li>
+                            <li><a href="#">Обратный звонок</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section collapsible">
+                        <div class="toggle wrapper-footer-title-img">
+                            <h3 class="toggle-hero">Меню</h3>
+                            <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                        </div>
+                        <ul class="content content-adaptive">
+                            <li><a href="#">О нас</a></li>
+                            <li><a href="#">Бренды</a></li>
+                            <li><a href="#">Акции</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Оплата и доставка</a></li>
+                        </ul>
+                    </div>
+                </div>
         
-        <div class="footer-section collapsible">
-            <h3 class="toggle">Меню</h3>
-            <ul class="content">
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Бренды</a></li>
-                <li><a href="#">Акции</a></li>
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Оплата и доставка</a></li>
-            </ul>
+                <div class="wrapper3-footer-section">
+                    <div class="footer-section collapsible">
+                        <div class="toggle wrapper-footer-title-img">
+                            <h3 class="toggle-hero">Информация</h3>
+                            <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                        </div>
+                        <ul class="content content-adaptive">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Салон Winekeys</a></li>
+                            <li><a href="#">Подарочные сертификаты</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="wrapper4-footer-section">
+                        <div class="footer-section collapsible">
+                            <div class="toggle wrapper-footer-title-img">
+                                <h3 class="toggle-hero">Мы в соц. сетях</h3>
+                                <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                            </div>
+                            <ul class="content content-adaptive">
+                                <li><a href="#">ВКонтакте</a></li>
+                                <li><a href="#">Telegram</a></li>
+                                <li><a href="#">WhatsApp</a></li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">Dzen</a></li>
+                            </ul>
+                        </div>
+                
+                        <div class="footer-section collapsible footer-section-double">
+                            <div class="toggle wrapper-footer-title-img">
+                                <h3 class="toggle-hero">Мы на картах</h3>
+                                <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                            </div>
+                            <ul class="content content-adaptive">
+                                <li><a href="#">Яндекс</a></li>
+                                <li><a href="#">Google</a></li>
+                                <li><a href="#">2GIS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="footer-section-bottom">
+                <div class="wrapper-footer-block">
+                    <div class="footer-section collapsible">
+                        <div class="toggle wrapper-footer-title-img">
+                            <h3 class="toggle-hero">Режим работы</h3>
+                            <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                        </div>
+                        <ul class="content content-adaptive">
+                            <li><a href="#">Пн-ПТ с 10:00 до 18:00</a></li>
+                        </ul>
+                    </div>
+            
+                    <div class="footer-section collapsible">
+                        <div class="toggle wrapper-footer-title-img">
+                            <h3 class="toggle-hero">Гид по товарам</h3>
+                            <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                        </div>
+                        <ul class="content content-adaptive">
+                            <li><a href="#">Винные шкафы</a></li>
+                            <li><a href="#">Хьюмидоры</a></li>
+                            <li><a href="#">Аксессуары</a></li>
+                            <li><a href="#">Винные кондиционеры</a></li>
+                            <li><a href="#">Системы разлива по бокалам</a></li>
+                        </ul>
+                    </div>
+                </div>	
+                <div class="footer-section collapsible footer-section-double-adaptive">
+                    <div class="toggle wrapper-footer-title-img">
+                            <h3 class="toggle-hero">Мы на картах</h3>
+                            <img src="/catalog/view/theme/unishop2/image/mini arrow-footer.svg" alt="">
+                        </div>
+                    <ul class="content content-adaptive">
+                        <li><a href="#">Яндекс</a></li>
+                        <li><a href="#">Google</a></li>
+                        <li><a href="#">2GIS</a></li>
+                    </ul>
+                </div>	
+            </div>	
         </div>
-
-        <div class="footer-section collapsible">
-            <h3 class="toggle">Информация</h3>
-            <ul class="content">
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Салон Winekeys</a></li>
-                <li><a href="#">Подарочные сертификаты</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section collapsible">
-            <h3 class="toggle">Гид по товарам</h3>
-            <ul class="content">
-                <li><a href="#">Винные шкафы</a></li>
-                <li><a href="#">Хьюмидоры</a></li>
-                <li><a href="#">Аксессуары</a></li>
-                <li><a href="#">Винные кондиционеры</a></li>
-                <li><a href="#">Системы разлива по бокалам</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section collapsible">
-            <h3 class="toggle">Мы в соц. сетях</h3>
-            <ul class="content">
-                <li><a href="#">ВКонтакте</a></li>
-                <li><a href="#">Telegram</a></li>
-                <li><a href="#">WhatsApp</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Dzen</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-section collapsible">
-            <h3 class="toggle">Мы на картах</h3>
-            <ul class="content">
-                <li><a href="#">Яндекс</a></li>
-                <li><a href="#">Google</a></li>
-                <li><a href="#">2GIS</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
-
-
-<script>
+    </footer>
+    
+    
+    <script>
     document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".toggle").forEach(toggle => {
             toggle.addEventListener("click", function () {
-                this.nextElementSibling.classList.toggle("content");
-                this.nextElementSibling.style.display = this.nextElementSibling.style.display === "block" ? "none" : "block";
+                let content = this.nextElementSibling;
+                let arrow = this.querySelector("img");
+    
+                // Переключаем видимость меню
+                content.style.display = content.style.display === "block" ? "none" : "block";
+    
+                // Поворачиваем стрелочку
+                if (content.style.display === "block") {
+                    arrow.style.transform = "rotate(-90deg)"; // Поворот на 90° против часовой
+                } else {
+                    arrow.style.transform = "rotate(0deg)"; // Возвращение в исходное положение
+                }
             });
         });
     });
     </script>
     
+    </body>
+    </html>
