@@ -1,0 +1,118 @@
+<style>
+.footer {
+    background: #f8f8f8;
+    padding: 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+/* 📱 Адаптив для экранов меньше 640px */
+@media (max-width: 640px) {
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .toggle {
+        cursor: pointer;
+        padding: 10px;
+        background: #ddd;
+        border-radius: 5px;
+    }
+
+    .content {
+        display: none;
+        padding-left: 10px;
+    }
+}
+</style>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Связаться с нами</h3>
+            <p>sales@winekeys.ru</p>
+            <p>+7 (800) 777-59-34</p>
+            <p>Обратный звонок</p>
+        </div>
+        
+        <div class="footer-section collapsible">
+            <h3 class="toggle">Меню</h3>
+            <ul class="content">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Бренды</a></li>
+                <li><a href="#">Акции</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Оплата и доставка</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section collapsible">
+            <h3 class="toggle">Информация</h3>
+            <ul class="content">
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Вакансии</a></li>
+                <li><a href="#">Салон Winekeys</a></li>
+                <li><a href="#">Подарочные сертификаты</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section collapsible">
+            <h3 class="toggle">Гид по товарам</h3>
+            <ul class="content">
+                <li><a href="#">Винные шкафы</a></li>
+                <li><a href="#">Хьюмидоры</a></li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Винные кондиционеры</a></li>
+                <li><a href="#">Системы разлива по бокалам</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section collapsible">
+            <h3 class="toggle">Мы в соц. сетях</h3>
+            <ul class="content">
+                <li><a href="#">ВКонтакте</a></li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">WhatsApp</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Dzen</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section collapsible">
+            <h3 class="toggle">Мы на картах</h3>
+            <ul class="content">
+                <li><a href="#">Яндекс</a></li>
+                <li><a href="#">Google</a></li>
+                <li><a href="#">2GIS</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".toggle").forEach(toggle => {
+            toggle.addEventListener("click", function () {
+                this.nextElementSibling.classList.toggle("content");
+                this.nextElementSibling.style.display = this.nextElementSibling.style.display === "block" ? "none" : "block";
+            });
+        });
+    });
+    </script>
+    
