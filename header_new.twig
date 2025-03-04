@@ -1,119 +1,15 @@
-<!DOCTYPE html>
-<html dir="{{ direction }}" lang="{{ lang }}">
-<head>
-<title>{{ title }}</title>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<base href="{{ base }}" />
-{% if robots %}
-<meta name="robots" content="{{ robots }}" />
-{% endif %}
-{% if description %}
-<meta name="description" content="{{ description }}" />
-{% endif %}
-{% if keywords %}
-<meta name="keywords" content="{{ keywords }}" />
-{% endif %}
-<meta property="og:title" content="{{ title }}" />
-<meta property="og:type" content="website" />
-{% if og_url%}
-<meta property="og:url" content="{{ og_url }}" />
-{% endif %}
-{% if og_image %}
-<meta property="og:image" content="{{ og_image }}" />
-{% endif %}
-<meta property="og:site_name" content="{{ name }}" />
-<meta name="theme-color" content="#{{ theme_color }}" />
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="date=no">
-<meta name="format-detection" content="address=no">
-<meta name="format-detection" content="email=no">
-<link rel="stylesheet" href="/catalog/view/theme/unishop2/stylesheet/header_new.css">
-{% for link in links %}
-<link href="{{ link.href }}" rel="{{ link.rel }}" />
-{% endfor %}
-{% for font in font_preload %}
-	<link href="{{ font }}" rel="preload" as="font" type="font/woff2" crossorigin />
-{% endfor %}
-{% for style in styles %}
-	{{ 'merged' in style.href ? '<link href="'~style.href~'" rel="preload" as="style" />' }}
-	<link href="{{ style.href }}" rel="{{ style.rel }}" media="{{ style.media }}" />
-{% endfor %}
-<script>const items_on_mobile = '{{ items_per_row_on_mobile }}', module_on_mobile = '{{ module_on_mobile }}', default_view = '{{ default_view }}', default_mobile_view = '{{ default_mobile_view }}';</script>
-{% for script in scripts %}
-	{{ 'merged' in script ? '<link href="'~script~'" rel="preload" as="script" />' }}
-	<script src="{{ script }}"></script>
-{% endfor %}
-{% if user_js %}
-<script>{{ user_js }}</script>
-{% endif %}
-{% for analytic in analytics %}
-	{{ analytic }}
-{% endfor %}
-{{ menu_expanded ? '<style>@media (min-width:992px) {header .menu1 .menu__collapse {display:block !important}}</style>' }}
-<noscript><style>.uni-module__wrapper{opacity:1}</style></noscript>
-</head>
-		
-
-<body>
-	<style>
-        
-    </style>
-
-    <header class="header">
+<header class="header">
 	<div class="header-top">
-        <div class="header-top__inner">
-        	<div class="container container_header-top">
-	            <div class="header-top__wrapper">
-	            	<div class="header-top__contact">
-		                <div class="header-top__location">
-		                    <img src="/catalog/view/theme/unishop2/image/Map_Pin.svg" alt="">
-		                    <span>Санкт-Петербург</span>
-		                </div>
-		                <div class="header-top__info">
-		                    <div class="header-top__social">
-		                        <img src="/catalog/view/theme/unishop2/image/telegramm.svg" alt="whatsapp">
-		                        <img src="/catalog/view/theme/unishop2/image/whatsapp.svg" alt="telegram">
-		                    </div>
-		                    <div class="header-top__phone">
-		                        <span class="header-top__phone-number">+7 (800) 777-59-34</span>
-		                    </div>
-		                </div>
-		            </div>
-		            <div class="header-top__menu">
-		                <div class="header-top__menu-item">
-		                    <a href="/catalog">О компании</a>
-		                </div>
-		                <div class="header-top__menu-item">
-		                    <a href="/delivery">Бренды</a>
-		                </div>
-		                <div class="header-top__menu-item">
-		                    <a href="/payment">Гарантии</a>
-		                </div>
-						<div class="header-top__menu-item">
-		                    <a href="/payment">Доставка и оплата</a>
-		                </div>
-						<div class="header-top__menu-item">
-		                    <a href="/payment">Вакансии</a>
-		                </div>
-						<div class="header-top__menu-item">
-		                    <a href="/payment">Контакты</a>
-		                </div>
-		            </div>
-	            </div>
-	        </div>
-        </div>
-	</div>
-	<div class="container">
-		<div class="header-block">
-					<div class="header-block__item header-block__item-logo">
-						<div id="logo" class="header-logo">
+		<div class="header-top__inner">
+			<div class="container container_header-top">
+				<div class="header-top__wrapper">
+					<div class="header-block__item-mobile">
+						<div id="logo" class="header-logoNew">
 							{% if logo %}
 								{% if og_url is defined and home == og_url %}
-									<img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" decoding="async" class="header-logo__img img-responsive" />
+									<img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" decoding="async" class="header-logo__img img-responsive"/>
 								{% else %}
-									<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" class="header-logo__img img-responsive img-responsiveNew" /></a>
+									<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" class="header-logo__img img-responsive img-responsiveNew"/></a>
 								{% endif %}
 							{% else %}
 								{% if og_url is defined and home == og_url %}
@@ -124,45 +20,496 @@
 							{% endif %}
 						</div>
 					</div>
-					{% if menu_positions %}
-						<div class="header-block__item header-block__item-menu hidden-xs hidden-sm">
-							<button class="header-menu__btn"><i class="header-menu__icon fas fa-fw fa-bars"></i>{{ text_menu }}</button>
+					<div class="header-top__contact">
+						<div class="header-top__location">
+							<a style="color: black;" target="_blank" href="https://yandex.ru/maps/?text=195213%2C+Санкт-Петербург%2C+ул.+Латышских+Стрелков%2C+19Б">
+								<img src="/catalog/view/theme/unishop2/image/Map_Pin.svg" alt="">
+								<span>Санкт-Петербург</span>
+							</a>
 						</div>
-					{% endif %}
-					<div class="prmn-cmngr">{{ prmn_cmngr }}</div>
-					<div id="search" class="  header-block__item header-block__item-search {{ search_phone_change ? 'order-2' }} hidden-xs hidden-sm">
-						{{ search_new }}
+						<div class="header-top__info">
+							<div class="header-top__social">
+								<a target="_blank" href="https://project12356339.tilda.ws/">
+									<img src="/catalog/view/theme/unishop2/image/telegramm.svg" alt="whatsapp">
+								</a>
+								<a target="_blank" href="https://wa.me/79522892225">
+									<img src="/catalog/view/theme/unishop2/image/whatsapp.svg" alt="telegram">
+								</a>
+							</div>
+							<div class="header-top__phone">
+								<a href="tel:+78007775934">
+									<span class="header-top__phone-number">+7 (800) 777-59-34</span>
+								</a>
+							</div>
+						</div>
 					</div>
-					{% if account.position == 2 %}
-						<div class="header-block__item header-block__item-account {{ class }}">
-							{% if logged %}
-								<div class="header-account" title="{{ text_account_new }}">
-									<i class="header-account__icon fas fa-user dropdown-toggle" data-toggle="dropdown"></i>
-									<ul class="dropdown-menu dropdown-menu-right">
-										<li><a href="{{ account.link }}"><i class="far fa-fw fa-user"></i>{{ text_account }}</a></li>
-										<li><a href="{{ order }}"><i class="fas fa-fw fa-history"></i>{{ text_order }}</a></li>
-										{% if account.transaction_link %}<li><a href="{{ transaction }}"><i class="fas fa-fw fa-exchange-alt"></i>{{ text_transaction }}</a></li>{% endif %}
-										{% if account.download_link %}<li><a href="{{ download }}"><i class="fas fa-fw fa-download"></i>{{ text_download }}</a></li>{% endif %}
-										<hr style="margin:5px 0" />
-										<li><a href="{{ logout }}"><i class="fas fa-fw fa-sign-out-alt"></i>{{ text_logout }}</a></li>
-									</ul>
-								</div>
-							{% else %}
-								<div class="header-account uni-href" {% if account.popup_login %}onclick="uniLoginOpen();"{% else %} data-href="{{ login }}"{% endif %} title="{{ text_login_new }}"><i class="header-account__icon far fa-user"></i></div>
-							{% endif %}
+					<div class="header-top__menu">
+						<div class="header-top__menu-item">
+							<a href="/about_us">О компании</a>
 						</div>
-					{% endif %}
-					<div class="wrapper-right-block">
-						<div class="header-block__item-phone">
-							<img src="/catalog/view/theme/unishop2/image/Phone.svg" alt="">
+						<div class="header-top__menu-item header-top__menu-item-adaptiv">
+							<a href="/faq/manufacturer">Бренды</a>
 						</div>
-						<div class="header-block__item-wishlistNew header-block__item header-block__item-wishlist">
-							<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}"><i class="header-wishlist__icon  fa-heart"></i><span class="header-wishlist__total-items">{{ wishlist.total }}</span></div>
+						<div class="header-top__menu-item header-top__menu-item-adaptiv">
+							<a href="/service">Гарантии</a>
 						</div>
-						<div class="header-block__item header-block__item-cart header-block__item-cartNew">{{ cart }}</div>
+						<div class="header-top__menu-item">
+							<a href="/delivery">Доставка и оплата</a>
+						</div>
+						<div class="header-top__menu-item">
+							<a href="/vakansii">Вакансии</a>
+						</div>
+						<div class="header-top__menu-item">
+							<a href="/address">Контакты</a>
+						</div>
 					</div>
 				</div>
+			</div>
+		</div>
 	</div>
-        
-	</header>
-</body>
+	<div class="container">
+		<div class="header-block">
+			<div class="header-block__item">
+				<div id="logo" class="header-logo">
+					{% if logo %}
+						{% if og_url is defined and home == og_url %}
+							<img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" decoding="async" class="header-logo__img img-responsive"/>
+						{% else %}
+							<a href="{{ home }}"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}" width="{{ logo_width }}" height="{{ logo_height }}" class="header-logo__img img-responsive img-responsiveNew"/></a>
+						{% endif %}
+					{% else %}
+						{% if og_url is defined and home == og_url %}
+							<span>{{ shop_name }}</span>
+						{% else %}
+							<a href="{{ home }}">{{ shop_name }}</a>
+						{% endif %}
+					{% endif %}
+				</div>
+			</div>
+			{% if menu_positions %}
+				<div class="header-block__item header-block__item-menu hidden-xs hidden-sm">
+					<button class="header-menu__btn">
+						<i class="header-menu__icon fas fa-fw fa-bars"></i>
+						{{ text_menu }}</button>
+				</div>
+			{% endif %}
+			<div class="prmn-cmngr">{{ prmn_cmngr }}</div>
+			<div id="search" class="  header-block__item header-block__item-search {{ search_phone_change ? 'order-2' }}">
+				{{ search_new }}
+			</div>
+			{% if account.position == 2 %}
+				<div class="header-block__item header-block__item-account {{ class }}">
+					{% if logged %}
+						<div class="header-account" title="{{ text_account_new }}">
+							<i class="header-account__icon fas fa-user dropdown-toggle" data-toggle="dropdown"></i>
+							<ul class="dropdown-menu dropdown-menu-right">
+								<li>
+									<a href="{{ account.link }}">
+										<i class="far fa-fw fa-user"></i>
+										{{ text_account }}</a>
+								</li>
+								<li>
+									<a href="{{ order }}">
+										<i class="fas fa-fw fa-history"></i>
+										{{ text_order }}</a>
+								</li>
+								{% if account.transaction_link %}
+									<li>
+										<a href="{{ transaction }}">
+											<i class="fas fa-fw fa-exchange-alt"></i>
+											{{ text_transaction }}</a>
+									</li>
+								{% endif %}
+								{% if account.download_link %}
+									<li>
+										<a href="{{ download }}">
+											<i class="fas fa-fw fa-download"></i>
+											{{ text_download }}</a>
+									</li>
+								{% endif %}
+								<hr style="margin:5px 0"/>
+								<li>
+									<a href="{{ logout }}">
+										<i class="fas fa-fw fa-sign-out-alt"></i>
+										{{ text_logout }}</a>
+								</li>
+							</ul>
+						</div>
+					{% else %}
+						<div class="header-account uni-href" {% if account.popup_login %} onclick="uniLoginOpen();" {% else %} data-href="{{ login }}" {% endif %} title="{{ text_login_new }}">
+							<i class="header-account__icon far fa-user"></i>
+						</div>
+					{% endif %}
+				</div>
+			{% endif %}
+			<div class="wrapper-right-block">
+				<div class="header-block__item-phone">
+					<a href="tel:+78007775934"><img src="/catalog/view/theme/unishop2/image/Phone.svg" alt=""></a>
+				</div>
+				<div class="header-block__item-wishlistNew header-block__item">
+					<div class="header-wishlist uni-href" data-href="{{ wishlist.href }}" title="{{ wishlist.text }}">
+						<i class="header-wishlist__icon  fa-heart"></i>
+						<span class="header-wishlist__total-items">{{ wishlist.total }}</span>
+					</div>
+				</div>
+				<div class="header-block__item header-block__item-cartNew header-block__item-cart">{{ cart }}</div>
+			</div>
+		</div>
+	</div>
+	<div
+		class="container">
+
+
+		<!-- mobMenu -->
+		<div class="menu-wrapperNew col-md-12">
+			<nav id="menu" class="menu  menu2 ">
+				<div class="menu__header">
+					<i class="menu__header-icon fa fa-fw fa-bars hidden-xs hidden-sm"></i>
+					<span class="menu__header-title">Каталог</span>
+					<i class="menu-close menu__header-icon fas fa-times visible-xs visible-sm"></i>
+				</div>
+				<ul class="menu__collapse main-menu__collapse">
+					<li class="menu__level-1-li has-children">
+						<a class="menu__level-1-a " href="https://winekeys.ru/vinnyi_shkaf/">Винные шкафы</a>
+						<span class="menu__pm menu__level-1-pm visible-xs visible-sm">
+							<i class="fa fa-plus"></i>
+							<i class="fa fa-minus"></i>
+						</span>
+						<div class="menu__level-2  column-1" style="opacity: 1; width: 100%; display: block;">
+
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/dlia-doma">Винные шкафы для дома</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vstroennyj-pod-stoleshnicy/">Винный шкаф под столешницу</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/freestanding/">Винный шкаф отдельно стоящий</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/nedorogo">Недорогие винные шкафы</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/malenkij-holodilnik-dlia-vina">Маленькие винные шкафы</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/uzkij">Узкие винные шкафы</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/dereviannyj/">Винный шкаф деревянный</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vitrina/">Винные витрины</a>
+							</div>
+						</div>
+					</li>
+					<li class="menu__level-1-li ">
+						<a class="menu__level-1-a " href="https://winekeys.ru/dispenser/">Диспенсеры
+						</a>
+					</li>
+					<li class="menu__level-1-li ">
+						<a class="menu__level-1-a " href="https://winekeys.ru/acc/">Аксессуары
+						</a>
+					</li>
+					<li class="menu__level-1-li ">
+						<a class="menu__level-1-a " href="https://winekeys.ru/holodilnik-mini-bar/">Мини бары
+						</a>
+					</li>
+					<li class="menu__level-1-li ">
+						<a class="menu__level-1-a " href="https://winekeys.ru/hyumidor/">Хьюмидоры
+						</a>
+					</li>
+					<li class="menu__level-1-li ">
+						<a class="menu__level-1-a " href="https://winekeys.ru/vitrina-myasa/">Витрины для мяса
+						</a>
+					</li>
+					<li class="menu__level-1-li " style="">
+						<a class="menu__level-1-a " href="https://winekeys.ru/holodilnik-syra/">Витрина для сыра
+						</a>
+					</li>
+					<li class="menu__level-1-li " style="">
+						<a class="menu__level-1-a " href="https://winekeys.ru/stellazh-dlya-vina/">Винный стеллаж
+						</a>
+					</li>
+					<li class="menu__level-1-li " style="">
+						<a class="menu__level-1-a " href="https://winekeys.ru/holodilnik-shub/">Холодильник для шуб
+						</a>
+					</li>
+					<li class="menu__level-1-li " style="">
+						<a class="menu__level-1-a " href="https://winekeys.ru/winery/">Винный погреб</a>
+					</li>
+					<li class="menu__level-1-li has-children" style="">
+						<a class="menu__level-1-a" href="brands">Производители</a>
+						<span class="menu__pm menu__level-1-pm visible-xs visible-sm">
+							<i class="fa fa-plus"></i>
+							<i class="fa fa-minus"></i>
+						</span>
+						<div class="menu__level-2  column-1" style="opacity: 1; width: 100%;">
+
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf-winekeys">Winekeys</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/?ocf=F1S0V88">ABCino</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyj-holidilnik-dunavox">Dunavox</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/?ocf=F1S0V89">Meyvel</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyj-holodilnik-caso">CASO</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_ecotronic">Ecotronic</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_eurocave">EuroCave</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_gemm">GEMM</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_kitfort">Kitfort</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_liebherr">Liebherr</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_pozis">POZIS</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_cavanova">Cavanova</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_maunfeld">Maunfeld</a>
+							</div>
+							<div class="menu__level-2-ul  col-md-12">
+								<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_climadiff">Climadiff</a>
+							</div>
+						</div>
+					</li>
+					<li class="menu__level-1-li menu__additional has-children">
+						<a class="menu__level-1-a additional">
+							<i class="fa fa-ellipsis-h"></i>
+						</a>
+						<div class="menu__level-2 column-1" style="margin-left: -190.984px;">
+							<div class="menu__level-2-ul col-md-12">
+								<a class="menu__level-2-a" href="https://winekeys.ru/holodilnik-syra/">
+									Витрина для сыра
+								</a>
+							</div>
+							<div class="menu__level-2-ul col-md-12">
+								<a class="menu__level-2-a" href="https://winekeys.ru/stellazh-dlya-vina/">
+									Винный стеллаж
+								</a>
+							</div>
+							<div class="menu__level-2-ul col-md-12">
+								<a class="menu__level-2-a" href="https://winekeys.ru/holodilnik-shub/">
+									Холодильник для шуб
+								</a>
+							</div>
+							<div class="menu__level-2-ul col-md-12">
+								<a class="menu__level-2-a" href="https://winekeys.ru/winery/">
+									Винный погреб
+								</a>
+							</div>
+							<div class="menu__level-2-ul col-md-12">
+								<a class="menu__level-2-a has-children" href="brands">
+									Производители
+								</a>
+								<div class="menu__level-3">
+									<ul class="menu__level-3-ul">
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf-winekeys">Winekeys</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/?ocf=F1S0V88">ABCino</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyj-holidilnik-dunavox">Dunavox</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/?ocf=F1S0V89">Meyvel</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyj-holodilnik-caso">CASO</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_ecotronic">Ecotronic</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_eurocave">EuroCave</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_gemm">GEMM</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_kitfort">Kitfort</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_liebherr">Liebherr</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_pozis">POZIS</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_cavanova">Cavanova</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_maunfeld">Maunfeld</a>
+										</li>
+										<li class="menu__level-3-li">
+											<a class="menu__level-3-a" href="https://winekeys.ru/vinnyi_shkaf/vinnyi_shkaf_climadiff">Climadiff</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
+		<!-- end-mobMenu -->
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+const menuWrapper = document.querySelector(".menu-wrapperNew");
+const openButton = document.querySelector(".menuNew__item-button");
+const closeButton = document.querySelector(".menu-close");
+
+if (openButton && menuWrapper) {
+openButton.addEventListener("click", function () {
+menuWrapper.classList.add("show");
+});
+}
+
+if (closeButton && menuWrapper) {
+closeButton.addEventListener("click", function () {
+menuWrapper.classList.remove("show");
+});
+}
+});
+		</script>
+
+
+		<div class="row">
+			<div class="block-menu-wrapper">
+				<div class="menu-wrapper1">
+					<div class="menuNew">
+						<ul class="menuNew__list menu2">
+							<li class="menuNew__item menuNew__item-button  has-children">
+								<div class="menuNew__button">
+									<a href="#">Каталог</a>
+									<img class="menuNew__button-arrow" src="/catalog/view/theme/unishop2/image/mini-arrow.svg" alt="">
+								</div>
+								<div class="wrapper-dropMenu-off">
+									<div class="dropMenu-off" style="max-height: 978.516px; opacity: 1;z-index: 1111;">
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/dlia-doma">Винные шкафы для дома</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vstroennyj-pod-stoleshnicy/">Винный шкаф под столешницу</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/freestanding/">Винный шкаф отдельно стоящий</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/nedorogo">Недорогие винные шкафы</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/malenkij-holodilnik-dlia-vina">Маленькие винные шкафы</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/uzkij">Узкие винные шкафы</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/dereviannyj/">Винный шкаф деревянный</a>
+										</div>
+										<div class="menu__level-2-ul  col-md-12">
+											<a class="menu__level-2-a " href="https://winekeys.ru/vinnyi_shkaf/vitrina/">Винные витрины</a>
+										</div>
+									</div>
+								</divclass="dropMenu">
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv4">
+								<a class="menuNew__link" href="#">Акции</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv4">
+								<a class="menuNew__link" href="https://winekeys.ru/vinnyi_shkaf/">Винные шкафы</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv3">
+								<a class="menuNew__link" href="https://winekeys.ru/dispenser/">Диспенсеры</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv3">
+								<a class="menuNew__link" href="https://winekeys.ru/acc/">Аксессуары</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv2">
+								<a class="menuNew__link" href="https://winekeys.ru/holodilnik-mini-bar/">Мини-бары</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv2">
+								<a class="menuNew__link" href="https://winekeys.ru/hyumidor/">Хьюмидоры</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv">
+								<a class="menuNew__link" href="https://winekeys.ru/vinnyi_shkaf/vitrina/">Витрины</a>
+							</li>
+							<li class="menuNew__item menuNew__link-adaptiv">
+								<a class="menuNew__link" href="https://winekeys.ru/stellazh-dlya-vina/">Стеллажи</a>
+							</li>
+						</ul>
+
+					</div>
+					<div class="menuNew__right">
+						<ul class="menuNew__right-list">
+							<li class="menuNew__right-item">
+								<a class="menuNew__link" href="https://winekeys.ru/faq/">Блог</a>
+							</li>
+							<li class="menuNew__right-item">
+								<a class="menuNew__link" href="#">Видео</a>
+							</li>
+						</ul>
+					</div>
+					<div class="wrapper-right-block-adaptiv">
+						<div class="header-block__item-phone">
+							<a href="tel:+78007775934">
+								<img src="/catalog/view/theme/unishop2/image/Phone.svg" alt="">
+							</a>
+						</div>
+						<div class="header-block__item-wishlistNew header-block__item">
+							<a>
+								<div class="header-wishlist uni-href" title="{{ wishlist.text }}">
+									<i class="header-wishlist__icon  fa-heart"></i>
+									<span class="header-wishlist__total-items">{{ wishlist.total }}</span>
+								</div>
+							</a>
+						</div>
+						<div class="header-block__item header-block__item-cart header-block__item-cartNew">
+							<a href="https://test.winekeys.ru/index.php?route=checkout/uni_checkout">{{ cart }}</a>
+						</div>
+					</div>
+						<!--<div class="icon-mobMenu">
+							<img class="icon-mobMenu__img" src="/catalog/view/theme/unishop2/image/align-justify.svg" alt="">
+						</div>-->
+				</div>
+				<div class="menu-wrapper-mobile">
+					<ul class="menu-wrapper-mobile__list">
+						<li class="menu-wrapper-mobile__item">
+							<a class="menuNew__link menu-wrapper-mobile__link" href="#">Акции</a>
+						</li>
+						<li class="menu-wrapper-mobile__item">
+							<a class="menuNew__link menu-wrapper-mobile__link" href="https://winekeys.ru/vinnyi_shkaf/">Винные шкафы</a>
+						</li>
+						<li class="menu-wrapper-mobile__item">
+							<a class="menuNew__link menu-wrapper-mobile__link" href="https://winekeys.ru/faq/">Блог</a>
+						</li>
+						<li class="menu-wrapper-mobile__item">
+							<a class="menuNew__link menu-wrapper-mobile__link" href="#">Видео</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
